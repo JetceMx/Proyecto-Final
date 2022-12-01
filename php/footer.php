@@ -25,7 +25,7 @@
                 <h2>Productos</h2>
                 <a href="#">Consolas</a>
                 <a href="#">Controles</a>
-                <a href="#">Accesotrios</a>
+                <a href="#">Accesorios</a>
             </div>
             <div class="box">
                 <h2>Tienda</h2>
