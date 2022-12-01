@@ -1,0 +1,7 @@
+white;
+#efefef;
+rgb(31, 30, 30);
+
+// Casi principal
+#c925b3;
+#060506;
