@@ -1,0 +1,123 @@
+/* Codigo del header  */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: flex;
+    min-height: 80px;
+    background-color: #060506;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 75px;
+    margin-right: 10px;
+}
+
+.buscar {
+    display: flex;
+    align-items: center;
+}
+
+.btn-buscar {
+    cursor: pointer;
+}
+
+.fa-solid {
+    padding-left: 10px;
+    color: white;
+}
+
+.fa-cart-shopping:hover {
+    color: #c925b3;
+}
+
+.buscar input {
+    width: 200px;
+    height: 28px;
+    font-size: 15px;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+nav a {
+    padding-right: 10px;
+}
+
+nav a:hover {
+    color: #c925b3;
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 10px 0px;
+    }
+}
+
+hr {
+    width: 75%;
+}
+
+/* Fin codigo del header  */
+
+/* Codigo de estilos de dropdown - header */
+
+.dropbtn {
+    background-color: #060506;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    color: #c925b3;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #060506;
+}
+
+.show {
+    display: block;
+}
+
+/* Fin codigo de estilos de dropdown - header*/
