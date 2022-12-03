@@ -1,0 +1,15 @@
+.Contactanos{
+    padding: 30px;
+    color: #efefef;
+}
+
+.Mapa{
+    width: 350px;
+    height: 300px;
+}
+
+.Cuerpo{
+    background: rgb(6,5,6);
+background: linear-gradient(180deg, rgba(6,5,6,1) 0%, rgba(201,37,179,1) 50%, rgba(6,5,6,1) 100%);
+    
+}
