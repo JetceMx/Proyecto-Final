@@ -105,7 +105,7 @@ Mexico.</pre>
 
             <div class="Formulario">
 
-                <form action="">
+                <form action="correo_contactanos.php">
 
                     <table>
 
@@ -115,8 +115,8 @@ Mexico.</pre>
                         </tr>
 
                         <tr>
-                            <td><input type="text" class="Texto1" required></td>
-                            <td><input type="text" class="Texto2" required></td>
+                            <td><input type="text" class="Texto1"  required></td>
+                            <td><input type="text" class="Texto2" name="email" required></td>
                         </tr>
 
                         <tr>
