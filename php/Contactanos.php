@@ -1,3 +1,7 @@
+<?php
+include "header.php";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,63 +22,6 @@
 </head>
 
 <body class="Cuerpo">
-
-    <header>
-
-        <a href="#" class="logo">
-            <img src="../images/logo (1).gif" alt="Logo Sabinito Games">
-            <h2 class="nombre-empresa">Sabinito Games</h2>
-        </a>
-        <div class="buscar">
-            <input type="text" placeholder=" Buscar" required>
-            <div class="btn-buscar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
-        <nav>
-            <a href="#" class="nav-link">Inicio</a>
-            <a href="#" class="nav-link">Tienda</a>
-            <a href="#" class="nav-link">Acerca De</a>
-            <a href="#" class="nav-link">Contáctanos</a>
-            <a href="#" class="nav-link">Ayuda</a>
-
-            <div class="dropdown">
-                <i class="fa-solid fa-user dropbtn" onclick="myFunction()"></i>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Mis pedidos</a>
-                    <a href="#">Mis direcciones</a>
-                    <a href="#">Mi billetera</a>
-                    <a href="#">Mis suscripciones</a>
-                    <a href="#">Mi cuenta</a>
-                    <hr>
-                    <a href="#">Salir</a>
-                </div>
-            </div>
-
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </nav>
-    </header>
-
-    <script>
-        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
 
 
     <h1 id="Titulo" class="animate__animated animate__flip">CONTACTANOS</h1>
@@ -160,49 +107,9 @@ Mexico.</pre>
 
 
 
-
-
-    <footer class="pie-pagina">
-
-        <div class="grupo-1">
-            <div class="box">
-                <figure>
-                    <a href="#">
-                        <img src="../images/logo (1).gif" alt="Logo Sabinito Games">
-                    </a>
-                </figure>
-            </div>
-            <div class="box">
-                <h2>Productos</h2>
-                <a href="#">Consolas</a>
-                <a href="#">Controles</a>
-                <a href="#">Accesorios</a>
-            </div>
-            <div class="box">
-                <h2>Tienda</h2>
-                <p>Lic. Benito Juárez, Zona Centro, 20000 Aguascalientes, Ags., México</p>
-                <p>Lun - Vie: 8:00 - 22:00 hrs</p>
-                <p>gamessabinito@gmail.com</p>
-            </div>
-            <div class="box">
-                <h2>Siguenos</h2>
-                <div class="red-social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                </div>
-            </div>
-            <div class="box">
-                <h2>Politica</h2>
-                <a href="#">FAQ</a>
-            </div>
-        </div>
-        <div class="grupo-2">
-            <small>&copy; 2022 <b>Sabinitos Games</b> - Todos los derechos reservados.</small>
-        </div>
-
-    </footer>
+ <?php
+    include "footer.php";
+    ?>
 
 </body>
 
