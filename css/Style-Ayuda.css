@@ -1,0 +1,30 @@
+.ayuda{ 
+    
+    display: flex;
+    justify-content: center;
+    color: #efefef;
+}
+
+.Cuerpo{
+    background: rgb(6,5,6);
+background: linear-gradient(180deg, rgba(6,5,6,1) 5%, rgba(201,37,179,1) 50%, rgba(6,5,6,1) 60%);
+    
+}
+
+.texto{
+    
+    Background-color: transparent;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 25%;
+    margin-top: 5%;
+}
+
+.titulo{
+    margin-top: 5%;
+}
+
+.accordion .accordion-item .accordion-header{
+    background: rgb(6,5,6);
+    background: linear-gradient(180deg, rgba(6,5,6,1) 5%, rgba(201,37,179,1) 50%, rgba(6,5,6,1) 60%);
+}
