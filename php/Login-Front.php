@@ -36,7 +36,7 @@ include "header.php";
   </div>
   <p class="p-container">
     <span>Olvidaste Tu Contraseña ?</span>
-    <input type="submit" name="go" id="go" value="Log in">
+    <input type="submit" name="go" id="go" value="Enviar">
   </p>
 </form>
    
