@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="../css/Style-Contactanos.css">
     <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
     <title>Coctactanos</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 
 <body class="Cuerpo">
@@ -73,11 +77,11 @@
     </script>
 
 
-
+    <h1 id="Titulo" class="animate__animated animate__flip">CONTACTANOS</h1>
 
     <table>
 
-        <td>
+        <td class="animate__animated animate__backInLeft" >
             <div class="Contactanos">
 
                 <p>gamessabinito@gmail.com</p>
@@ -97,7 +101,7 @@ Mexico.</pre>
 
 
 
-        <td>
+         <td class="animate__animated animate__backInRight" >
 
             <div class="Formulario">
 
@@ -111,8 +115,8 @@ Mexico.</pre>
                         </tr>
 
                         <tr>
-                            <td><input type="text" required></td>
-                            <td><input type="text" required></td>
+                            <td><input type="text" class="Texto1" required></td>
+                            <td><input type="text" class="Texto2" required></td>
                         </tr>
 
                         <tr>
@@ -121,8 +125,8 @@ Mexico.</pre>
                         </tr>
 
                         <tr>
-                            <td><input type="text" required></td>
-                            <td><input type="text" required></td>
+                            <td><input type="text" class="Texto3" required></td>
+                            <td><input type="text" class="Texto4" required></td>
                         </tr>
 
                         <tr>
@@ -134,7 +138,7 @@ Mexico.</pre>
 
                         <tr>
 
-                            <td colspan="2"><input type="submit" class="Boton"></td>
+                            <td colspan="2"><input type="submit" class="Boton" value="ENVIAR" ></td>
 
                         </tr>
 
