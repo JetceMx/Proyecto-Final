@@ -1,0 +1,9 @@
+Recuerda realizar primero hacer un pull antes de empezar con tu avance!
+Actualiza o realiza un cambio, carga de tu avance o algo asi (Modificar)
+Oprimir en "ver cambios"
+Aceptar todos los cambios
+Añadir mensaje de commit  
+Dar el commit
+Dar el push!
+
+Listo :D!
