@@ -34,6 +34,18 @@ include "header.php";
     <label for="remember">Recordar Usuario</label>
   </p>
   </div>
+  <div class="capt">
+    <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+    <br>
+    <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
+</div>
+<script>
+    var refreshButton = document.querySelector(".refresh-captcha");
+    refreshButton.onclick = function() {
+    document.querySelector(".captcha-image").src = 'get_captcha.php?' + Date.now();
+}
+</script>
+
   <p class="p-container">
     <span>Olvidaste Tu Contraseña ?</span>
     <input type="submit" name="go" id="go" value="Enviar">
@@ -43,6 +55,6 @@ include "header.php";
    <?php
     include "footer.php";
     ?>
-    
+
 </body>
 </html>
