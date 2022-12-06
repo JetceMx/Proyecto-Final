@@ -130,8 +130,8 @@
                 
                 <br><br>
                 
-                <button><a href="Eliminar.php">Eliminar Datos</a></button>
-                <button><a href="Principal.php">Ingresar Datos</a></button>
+                <button><a href="BajaProd.php">Eliminar Datos</a></button>
+                <button><a href="AltaProd.php">Ingresar Datos</a></button>
                 <button><a href="CompraP.php">Comprar Productos</a></button>
                          
             </form>

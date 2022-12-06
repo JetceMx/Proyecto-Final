@@ -17,6 +17,30 @@
         
         if(isset($_POST['submit'])&& !empty($_POST['ID'])){ // CONEXION EXITOSA...
             
+            // GUARDAR IMAGEN EN CARPETA...
+
+            $target_dir = "images/";
+            $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+            $uploadOk = 1;
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            // Check if image file is a actual image or fake image
+
+            if(isset($_POST["submit"])) {
+
+              $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+
+              if($check !== false) {
+
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+
+              } else {
+
+                echo "File is not an image.";
+                $uploadOk = 0;
+              }
+            }
+            
                 // OBTENCION DE DATOS DEL FORMULARIO...
             
                 $id = $_POST['ID'];
@@ -25,7 +49,7 @@
                 $desc = $_POST['Desc'];
                 $exist = $_POST['Exist'];
                 $precio = $_POST['Precio'];
-                $img = $_POST['Img'];
+                $img = $target_file;
             
                 // SENTENCIA PARA INSERTAR DATOS POR CADENA -MYSQL- ...
             
@@ -126,7 +150,7 @@
            
             <div class="col-4">
                
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post' enctype="multipart/form-data">
                    
                     <h2> - REGISTRO DE PRODUCTOS - </h2>
                     
@@ -161,17 +185,16 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="Img"> Imagen (URL): </label>
-                        <input name="Img" type="text" class="form-control" id="Img" placeholder="">
-                        Para poder usar la imagen, es necesario ingresarla en la carpeta "Imagenes".
+                        <label for="Img"> Imagen: </label>
+                        <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
                     </div>
                     
                     <button class="btn btn-success" type="submit" name="submit"> ENVIAR </button>
                     
                     <br><br>
                     
-                    <button><a href="Eliminar.php">Eliminar Datos</a></button>
-                    <button><a href="Modificar.php">Modificar Datos</a></button>
+                    <button><a href="BajaProd.php">Eliminar Datos</a></button>
+                    <button><a href="ModiProd.php">Modificar Datos</a></button>
                     <button><a href="CompraP.php">Comprar Producto</a></button>
                     
                     <img src="" height="" width="">

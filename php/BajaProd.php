@@ -60,8 +60,8 @@
             
             <br><br>
             
-            <button><a href="Modificar.php">Modificar Datos</a></button>
-            <button><a href="Principal.php">Ingresar Datos</a></button>
+            <button><a href="ModiProd.php">Modificar Datos</a></button>
+            <button><a href="AltaProd.php">Ingresar Datos</a></button>
     
     </form>
 </div>
