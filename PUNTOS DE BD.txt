@@ -1,0 +1,19 @@
+-- PUNTOS DE LA BASE DE DATOS (LOCAL) A TENER EN CUENTA --
+
+
+    - Variables de Conexion:
+
+    $servidor='localhost:33065';
+    $cuenta='root';
+    $password='';
+    $bd='productos';
+    
+    Las variables anteriores se pueden modificar dependiendo de como se llame y como se tenga configurado el puerto de PHPMyAdmin,
+    generalmente el puerto de XAMP viene por defecto en "localhost", en mi caso lo edite y por eso esta "localhost:33065", de ser
+    necesario, se modifica en los archivos: AltaProd, BajaProd, ModiProd.
+    
+    Estas variables se encuentran al incio de los archivos pertinentes, y se podran modificar sus contenidos para la conexion con
+    la base de datos del hosting de manera sencilla, sin hacer tantos cambios.
+    
+    Igualmente, se debe crear una base de datos y una tabla llamada "productos" para que la codificacion dentro de los archivos
+    anteriores se ejecute de manera correcta (se encuentre la BD en PHPMyAdmin y se hagan las modificaciones deseadas).
