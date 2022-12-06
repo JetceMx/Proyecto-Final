@@ -38,7 +38,7 @@ if ($conexion->connect_errno) {
         if ($nr == 1) {
             session_start();
             $_SESSION["usuario"]=$usr;
-            echo $_SESSION["usuario"];
+            $_SESSION["pass"]=$_POST["txtpassword"];
         } else {
 
 ?>
