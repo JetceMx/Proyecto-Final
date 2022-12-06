@@ -17,30 +17,6 @@
         
         if(isset($_POST['submit'])&& !empty($_POST['ID'])){ // CONEXION EXITOSA...
             
-            // GUARDAR IMAGEN EN CARPETA...
-
-            $target_dir = "images/";
-            $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-            $uploadOk = 1;
-            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-            // Check if image file is a actual image or fake image
-
-            if(isset($_POST["submit"])) {
-
-              $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-
-              if($check !== false) {
-
-                echo "File is an image - " . $check["mime"] . ".";
-                $uploadOk = 1;
-
-              } else {
-
-                echo "File is not an image.";
-                $uploadOk = 0;
-              }
-            }
-            
                 // OBTENCION DE DATOS DEL FORMULARIO...
             
                 $id = $_POST['ID'];
@@ -49,7 +25,7 @@
                 $desc = $_POST['Desc'];
                 $exist = $_POST['Exist'];
                 $precio = $_POST['Precio'];
-                $img = $target_file;
+                $img = $_POST['Img'];
             
                 // SENTENCIA PARA INSERTAR DATOS POR CADENA -MYSQL- ...
             
@@ -120,6 +96,7 @@
     }
 ?>
 
+<!-- FRONT DEL FORMULARIO ------------------------------------------------------------------------------------------------------->
 
 <html lang="en">
 
@@ -149,6 +126,8 @@
         <div class="row">
            
             <div class="col-4">
+
+<!-- FORMULARIO PARA DATOS ------------------------------------------------------------------------------------------------------>
                
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post' enctype="multipart/form-data">
                    
@@ -185,19 +164,32 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="Img"> Imagen: </label>
-                        <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
+                        <label for="Desc"> Imagen(URL): </label>
+                        <input name="Img" type="text" class="form-control" id="Img" placeholder="">
                     </div>
                     
-                    <button class="btn btn-success" type="submit" name="submit"> ENVIAR </button>
+                    <button class="btn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
+                    
+<!-- FORMULARIO PARA IMAGEN ----------------------------------------------------------------------------------------------------->
+                    
+                    <form action="LogicaImagen.php" method="post" enctype="multipart/form-data">
+                        
+                        <div class="form-group">
+                            <label for="Img"> Imagen: </label>
+                            <input type="file" name="fileTest" id="fileTest" class="form-control">
+                        </div>
+                        
+                        <button class="btn btn-success" type="submit" name="submit"> ENVIAR IMAGEN </button>
+                        
+                    </form>
                     
                     <br><br>
+                    
+<!-- BOTONES DE ACCESO ---------------------------------------------------------------------------------------------------------->
                     
                     <button><a href="BajaProd.php">Eliminar Datos</a></button>
                     <button><a href="ModiProd.php">Modificar Datos</a></button>
                     <button><a href="CompraP.php">Comprar Producto</a></button>
-                    
-                    <img src="" height="" width="">
                     
                 </form>
                 
