@@ -19,38 +19,30 @@ include "header.php";
 </head>
 
 <body>
-<form class="animate__animated animate__backInDown" method="POST" action="Registro.php">
+<form class="animate__animated animate__backInDown" method="POST" action="registro.php">
   <h1 class="titulo">Registrate</h1>
   <div class="inset">
   <p>
     <label for="Nombre">Nombre completo</label>
-    <input type="text" name="Nombre" id="Name">
+    <input type="text" name="txtnombre" id="Name">
   </p>
   <p>
     <label for="Usuario">Nombre de usuario</label>
-    <input type="password" name="Usuario" id="User">
+    <input type="text" name="txtusr" id="User">
   </p>
   <p>
     <label for="email">Correo electronico</label>
-    <input type="text" name="email" id="correo">
+    <input type="text" name="txtcorreo" id="correo">
   </p>
   <p>
     <label for="password">Contraseña</label>
-    <input type="password" name="Contraseña" id="Pass">
+    <input type="password" name="txtpassword" id="Pass">
+  </p>
+  <p>
+    <label for="password"> Vuelve a ingresar tu Contraseña</label>
+    <input type="password" name="txtpassword2" id="Pass">
   </p>
   </div>
-  <div class="capt">
-    <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
-    <br>
-    <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
-</div>
-    <script>
-        var refreshButton = document.querySelector(".refresh-captcha");
-        refreshButton.onclick = function() {
-            document.querySelector(".captcha-image").src = 'get_captcha.php?' + Date.now();
-        }
-    </script>
-
   <p class="p-container">
   ¿Ya tienes cuenta? <br> <a href="http://localhost/Trabajos/Prueba/php/Login-Front.php"><span>Inicia sesión</span></a>
     <input type="submit" name="registro" id="registro" value="Registrarte">
