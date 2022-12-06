@@ -22,12 +22,12 @@ include "header.php";
   <h1>Iniciar Sesion</h1>
   <div class="inset">
   <p>
-    <label for="email">Usuario</label>
-    <input type="text" name="Usuario" id="User">
+  <label for="email">Usuario</label>
+    <input type="text" name="txtusr" id="User">
   </p>
   <p>
     <label for="password">Contraseña</label>
-    <input type="password" name="Contraseña" id="Pass">
+    <input type="password" name="txtpassword" id="Pass">
   </p>
   <p>
     <input type="checkbox" name="remember" id="remember">
