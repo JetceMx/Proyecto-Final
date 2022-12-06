@@ -19,9 +19,13 @@ include "header.php";
     <title>Ayuda</title>
 </head>
 
-<body class="Cuerpo">
+<body class="Cuerpo">   
+
+<form class="animate__animated animate__backInDown" method="POST" action="Registro.php">
+
+
     
-    <div class="ayuda">
+    <div class="ayuda ">
 
         <h1 class="titulo">Preguntas más frecuentes</h1>
 
@@ -89,7 +93,9 @@ include "header.php";
                 <div class="accordion-body">Por supuesto, siempre y cuando aún tengas tu comprobante de pago.</div>
             </div>
         </div>
-    </div>    
+    </div>
+
+</form>
 
     <?php
     include "footer.php";
