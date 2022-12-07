@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="../css/Style-Global.css">
     <link rel="stylesheet" href="../css/Style-header.css">
     <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
-    <title>Header</title>
 </head>
 
 <body>
-    <header>
+    <header class="encabezado">
         <a href="#" class="logo">
             <img src="../images/logo (1).gif" alt="Logo Sabinito Games">
             <h2 class="nombre-empresa">Sabinito Games</h2>

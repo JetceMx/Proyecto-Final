@@ -1,16 +1,16 @@
 /* Codigo del header  */
-a {
-    text-decoration: none;
-    color: white;
-}
-
-header {
+.encabezado {
     display: flex;
     min-height: 80px;
     background-color: #060506;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+.encabezado a {
+    text-decoration: none;
+    color: white;
 }
 
 .logo {
@@ -49,25 +49,25 @@ header {
     border-radius: 5px;
 }
 
-nav a {
+.encabezado nav a {
     padding-right: 10px;
 }
 
-nav a:hover {
+.encabezado nav a:hover {
     color: #c925b3;
 }
 
 @media (max-width:700px) {
-    header {
+    .encabezado header {
         flex-direction: column;
     }
 
-    nav {
+    .encabezado nav {
         padding: 10px 0px;
     }
 }
 
-hr {
+.encabezado hr {
     width: 75%;
 }
 

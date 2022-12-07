@@ -1,18 +1,27 @@
-.ayuda{ 
-    
+.ayuda {
     display: flex;
     justify-content: center;
     color: #efefef;
 }
 
-.Cuerpo{
-    background: rgb(6,5,6);
-background: linear-gradient(180deg, rgba(6,5,6,1) 10%, rgba(201,37,179,1) 67%, rgba(6,5,6,1) 60%);
-    
+.Cuerpo {
+    background: rgb(6, 5, 6);
+    background: linear-gradient(180deg, rgba(6, 5, 6, 1) 10%, rgba(201, 37, 179, 1) 67%, rgba(6, 5, 6, 1) 60%);
+
 }
 
-.texto{
+.texto {
     border-collapse: 5px;
+}
+
+.Cuerpo {
+    background: rgb(6, 5, 6);
+    background: linear-gradient(180deg, rgba(6, 5, 6, 1) 5%, rgba(201, 37, 179, 1) 50%, rgba(6, 5, 6, 1) 60%);
+
+}
+
+.texto {
+
     Background-color: transparent;
     margin-left: 20%;
     margin-right: 20%;
@@ -21,13 +30,13 @@ background: linear-gradient(180deg, rgba(6,5,6,1) 10%, rgba(201,37,179,1) 67%, r
     background-color: green;
 }
 
-.titulo{
+.titulo {
     margin-top: 5%;
-   text-shadow: 6px 5px 7px rgba(201,37,179,1);
+    text-shadow: 6px 5px 7px rgba(201, 37, 179, 1);
 }
 
-.accordion-flush{
-    background-color: rgba(201,37,179,1);
+.accordion-flush {
+    background-color: rgba(201, 37, 179, 1);
 }
 
 
@@ -36,39 +45,45 @@ background: linear-gradient(180deg, rgba(6,5,6,1) 10%, rgba(201,37,179,1) 67%, r
 
 @import "compass/css3";
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 form {
- 	background:#111; 
-  width:700px;
-  margin:20px auto;
-  border-radius:0.4em;
-  border:1px solid #191919;
-  overflow:hidden;
-  position:relative;
-  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+    background: #111;
+    width: 700px;
+    margin: 20px auto;
+    border-radius: 0.4em;
+    border: 1px solid #191919;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 
 form:before {
- 	content:"";
-  display:block;
-  position:absolute;
-  width: 240px;
-  height:5px;
-  border-radius:100%;
-  left:33.5%;
-  top:-2px;
-  box-shadow: 0 0 6px 4px rgba(201,37,179,1);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 240px;
+    height: 5px;
+    border-radius: 100%;
+    left: 33.5%;
+    top: -2px;
+    box-shadow: 0 0 6px 4px rgba(201, 37, 179, 1);
 }
 
 form h1 {
-  font-size:25px;
-  text-shadow:0 1px 0 black;
-  text-align:center;
-  padding:15px 0;
-  border-bottom:1px solid rgba(201,37,179,1);
-  position:relative;
+    font-size: 25px;
+    text-shadow: 0 1px 0 black;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(201, 37, 179, 1);
+    position: relative;
 }
 
 
+.accordion .accordion-item .accordion-header {
+    background: rgb(6, 5, 6);
+    background: linear-gradient(180deg, rgba(6, 5, 6, 1) 5%, rgba(201, 37, 179, 1) 50%, rgba(6, 5, 6, 1) 60%);
+}
