@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -30,83 +29,83 @@
             <a href="#" class="nav-link">Contáctanos</a>
             <a href="#" class="nav-link">Ayuda</a>
             <?php
+            date_default_timezone_set('America/Mexico_City');
+            $today = getdate();
+            $hora = $today["hours"];
+
+            $usrh = "";
+            if ($hora <= 12) {
+                $usrh = "Buenos dias ";
+            } elseif ($hora < 19 && $hora > 12) {
+                $usrh = "Buenas tardes ";
+            } elseif ($hora <= 24 && $hora >= 19) {
+                $usrh = "Buenas noches ";
+            }
+            session_start();
+            if (isset($_SESSION['usuario']) && $_SESSION["usuario"] != "admin") {
+                $var = $usrh . $_SESSION['usuario'];
+            ?>
+            <a class="nav-link">
+                <?php
+                echo $var;
+                ?>
+
+            </a>
+
+            <div class="dropdown">
+                <i class="fa-solid fa-user dropbtn" onclick="myFunction()"></i>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Mis pedidos</a>
+                    <a href="#">Mis direcciones</a>
+                    <a href="#">Mi billetera</a>
+                    <a href="#">Mis suscripciones</a>
+                    <a href="#">Mi cuenta</a>
+                    <hr>
+                    <a href="logout.php">Salir</a>
+                </div>
+            </div>
+            <?php
+
+            } elseif (isset($_SESSION["usuario"]) && $_SESSION["usuario"] == "admin") {
                 date_default_timezone_set('America/Mexico_City');
                 $today = getdate();
-                $hora=$today["hours"];
-                
-                $usrh="";
-                if ($hora<=12) {
-                $usrh="Buenos dias ";
-                }elseif($hora<19 && $hora >12){
-                $usrh="Buenas tardes ";
-                }elseif($hora<=24 && $hora >=19){
-                $usrh="Buenas noches ";
+                $hora = $today["hours"];
+
+                $usrh = "";
+                if ($hora <= 12) {
+                    $usrh = "Buenos dias ";
+                } elseif ($hora < 19 && $hora > 12) {
+                    $usrh = "Buenas tardes ";
+                } elseif ($hora <= 24 && $hora >= 19) {
+                    $usrh = "Buenas noches ";
                 }
-                session_start();
-                if(isset($_SESSION['usuario']) && $_SESSION["usuario"] != "admin"){
-                    $var = $usrh.$_SESSION['usuario'];
-                    ?>
-                    <a  class="nav-link">
-                        <?php
-                        echo $var;
-                        ?>
-                        
-                    </a>
-                
-                    <div class="dropdown">
-                    <i class="fa-solid fa-user dropbtn" onclick="myFunction()"></i>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Mis pedidos</a>
-                        <a href="#">Mis direcciones</a>
-                        <a href="#">Mi billetera</a>
-                        <a href="#">Mis suscripciones</a>
-                        <a href="#">Mi cuenta</a>
-                        <hr>
-                        <a href="logout.php">Salir</a>
-                    </div>
-                    </div>
-                    <?php
-                       
-                        }elseif(isset($_SESSION["usuario"]) && $_SESSION["usuario"] == "admin"){
-                            date_default_timezone_set('America/Mexico_City');
-                            $today = getdate();
-                            $hora=$today["hours"];
-                            
-                            $usrh="";
-                            if ($hora<=12) {
-                            $usrh="Buenos dias ";
-                            }elseif($hora<19 && $hora >12){
-                            $usrh="Buenas tardes ";
-                            }elseif($hora<=24 && $hora >=19){
-                            $usrh="Buenas noches ";
-                            }
-                            
-                            $var = $usrh.$_SESSION['usuario'];
-                    ?>
-                    
-                        
-                        <a  class="nav-link">
-                            <?php
-                            echo $var;
-                            ?>
-                            
-                        </a>
-                    
-                        <div class="dropdown">
-                        <i class="fa-solid fa-user dropbtn" onclick="myFunction()"></i>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Mis pedidos</a>
-                            <a href="#">Mis direcciones</a>
-                            <a href="#">Mi billetera</a>
-                            <a href="#">Mis suscripciones</a>
-                            <a href="#">Mi cuenta</a>
-                            <a href="#">Administracion</a>
-                            <hr>
-                            <a href="logout.php">Salir</a>
-                        </div>
-                        </div>
+
+                $var = $usrh . $_SESSION['usuario'];
+            ?>
+
+
+            <a class="nav-link">
+                <?php
+                echo $var;
+                ?>
+
+            </a>
+
+            <div class="dropdown">
+                <i class="fa-solid fa-user dropbtn" onclick="myFunction()"></i>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Mis pedidos</a>
+                    <a href="#">Mis direcciones</a>
+                    <a href="#">Mi billetera</a>
+                    <a href="#">Mis suscripciones</a>
+                    <a href="#">Mi cuenta</a>
+                    <a href="#">Administracion</a>
+                    <hr>
+                    <a href="logout.php">Salir</a>
+                </div>
+            </div>
             <?php
-                }else{
+            } else {
             ?>
             <div class="dropdown">
                 <i class="fa-solid fa-user dropbtn" onclick="myFunction()"></i>
@@ -116,7 +115,7 @@
                 </div>
             </div>
             <?php
-                }
+            }
             ?>
 
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>

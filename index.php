@@ -1,5 +1,5 @@
 <?php
-include_once "header.php";
+include_once "php/header.php";
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ include_once "header.php";
     <br>
 
     <?php
-    include "footer.php";
+    include "php/footer.php";
     ?>
 
 </body>
