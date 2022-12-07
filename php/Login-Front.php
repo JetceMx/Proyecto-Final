@@ -34,7 +34,7 @@ include "header.php";
     <label for="remember">Recordar Usuario</label>
   </p>
   </div>
-  <div class="capt">
+  <div class="p-container">
     <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
     <br>
     <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
@@ -47,7 +47,8 @@ include "header.php";
 </script>
 
   <p class="p-container">
-    <span>Olvidaste Tu Contraseña ?</span>
+    <!--<span>Crear Cuenta</span> -->
+    <a href="Registro-front.php" class linkr>Crear cuenta</a>
     <input type="submit" name="go" id="go" value="Enviar">
   </p>
 </form>

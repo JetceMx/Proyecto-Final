@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $servidor = 'localhost';
 $cuenta = 'root';
@@ -31,21 +32,39 @@ if ($conexion->connect_errno) {
 
     $contrsena = $_POST['txtpassword'];
     $passFuerte = base64_encode($contrsena);
-    echo $passFuerte;
+    
     if (isset($_POST['go'])) {
         $queryusuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$usr' AND contraseña = '$passFuerte'");
         $nr = mysqli_num_rows($queryusuario);
         if ($nr == 1) {
-            session_start();
+        
             $_SESSION["usuario"]=$usr;
             $_SESSION["pass"]=$_POST["txtpassword"];
+            ?>
+                <script>
+                    location.href = "index.php";
+                </script>
+            <?php
         } else {
 
 ?>
-
+<?php
+   
+    $_SESSION["contador"] = $_SESSION["contador"]+1;
+   
+    if($_SESSION["contador"] >= 3){
+        $_SESSION["contador"]=0;
+        
+        $aux="temp";
+        $new=base64_encode($aux);
+        $actualizar="UPDATE login.usuarios SET contraseña='$new' WHERE usuario='$usr'";
+        $conexion->query($actualizar);
+       
+    }
+?>
 <!-- Por mejorar esta alerta con alguna de las que hicimos en clase -->
 <script>
-    alert('No se encontró ningun usuario!');
+    alert('No se encontró ningun usuario! Recuerda que tienes 3 intentos para Iniciar Sesion');
    location.href = "Login-front.php";
 </script>
 
@@ -55,6 +74,3 @@ if ($conexion->connect_errno) {
 
 }
 ?>
-<script>
-    location.href = "index.php";
-</script>
