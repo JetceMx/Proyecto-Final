@@ -1,8 +1,7 @@
 <?php
 //Falta creacion de la contraseña temporal
-session_start();
-$mail="sebasterra69@gmail.com";
-//$mail = $_POST['email'];
+
+$mail = $_POST['correorecu'];
 $asunto = 'Sabinito Games';
 $msj=" temp";
 

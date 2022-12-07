@@ -59,7 +59,7 @@ if ($conexion->connect_errno) {
         $new=base64_encode($aux);
         $actualizar="UPDATE login.usuarios SET contraseña='$new' WHERE usuario='$usr'";
         $conexion->query($actualizar);
-       
+       header("location: recu.php");
     }
 ?>
 <!-- Por mejorar esta alerta con alguna de las que hicimos en clase -->
