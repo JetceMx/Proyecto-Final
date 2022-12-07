@@ -12,7 +12,7 @@
 
 <body>
     <header class="encabezado">
-        <a href="#" class="logo">
+        <a href="index.php" class="logo">
             <img src="../images/logo (1).gif" alt="Logo Sabinito Games">
             <h2 class="nombre-empresa">Sabinito Games</h2>
         </a>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <nav>
-            <a href="#" class="nav-link">Inicio</a>
+            <a href="index.php" class="nav-link">Inicio</a>
             <a href="#" class="nav-link">Tienda</a>
             <a href="#" class="nav-link">Acerca De</a>
             <a href="#" class="nav-link">Contáctanos</a>
@@ -59,7 +59,7 @@
                     <a href="#">Mis direcciones</a>
                     <a href="#">Mi billetera</a>
                     <a href="#">Mis suscripciones</a>
-                    <a href="#">Mi cuenta</a>
+                    <a href="actualizar.php">Mi cuenta</a>
                     <hr>
                     <a href="logout.php">Salir</a>
                 </div>
@@ -98,7 +98,7 @@
                     <a href="#">Mis direcciones</a>
                     <a href="#">Mi billetera</a>
                     <a href="#">Mis suscripciones</a>
-                    <a href="#">Mi cuenta</a>
+                    <a href="actualizar.php">Mi cuenta</a>
                     <a href="#">Administracion</a>
                     <hr>
                     <a href="logout.php">Salir</a>
