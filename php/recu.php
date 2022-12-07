@@ -24,7 +24,7 @@ include "header.php";
         <p>Tu cuenta fue bloqueda ingresa un correo para mandar tu recuperacion</p>
         <p>
           <label for="email">Correo</label>
-          <input type="text" name="correorecu" id="User">
+          <input type="text" name="recu" id="User">
         </p>
         <p class="p-container">
           <input type="submit" name="go" id="go" value="Enviar">
