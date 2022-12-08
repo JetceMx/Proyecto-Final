@@ -18,9 +18,13 @@ include "header.php";
 
 <body>
     <div class="formulario">
-    <form class="animate__animated animate__backInDown" method="POST" action="login.php">
+    <form class="animate__animated animate__backInDown" method="POST" action="cambiarpass.php">
     <h1>Cambiar Contraseña</h1>
     <div class="inset">
+      <p>
+        <label for="email">Escribe tu usuario</label>
+        <input type="text" name="user" id="pass">
+      </p>
       <p>
         <label for="email">Contraseña</label>
         <input type="password" name="contranew" id="pass">

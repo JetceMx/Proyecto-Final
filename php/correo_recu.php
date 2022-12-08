@@ -7,3 +7,7 @@ $msj=" temp";
 
 mail($mail,$asunto,$msj);
 ?>
+<script>
+    alert('Tu cuenta a sido desbloqueada ');
+   location.href = "actualizar.php";
+</script>
