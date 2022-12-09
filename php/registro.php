@@ -30,7 +30,7 @@ if ($conexion->connect_errno) {
 <!-- Por mejorar esta alerta con alguna de las que hicimos en clase -->
 <script>
     alert('Las claves no coinciden');
-    location.href = "index.php";
+    location.href = "Inicio.php";
 </script>
 
 <?php

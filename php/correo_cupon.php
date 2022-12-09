@@ -3,13 +3,7 @@
 
 $mail = $_POST['cupon'];
 $asunto = 'Sabinito Games';
-$men="<html>
-      <body>
-      <p>Gracias por suscribirte ten un cupon!!!</p>
-      <br>
-      <img src='https://ibb.co/f8D3PC6'> 
-      </body>
-      </html>";
+$men="<img src='https://sabinitogames.shop/images/cupon.png'> ";
 
 mail($mail,$asunto,$men);
 ?>
