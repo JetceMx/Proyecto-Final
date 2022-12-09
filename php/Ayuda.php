@@ -110,8 +110,15 @@ include "header.php";
                 </div>
             </div>
         </div>
+<<<<<<< Updated upstream
 
     </form>
+=======
+    </div>
+
+
+</form>
+>>>>>>> Stashed changes
 
     <?php
     include "footer.php";

@@ -6,7 +6,7 @@ body {
   color:white;
   font-size:12px;
   background: rgb(6, 5, 6);
-  background: linear-gradient(180deg, rgba(6, 5, 6, 1) 10%, rgba(201, 37, 179, 1) 80%, rgba(6, 5, 6, 1) 60%);
+  background: linear-gradient(180deg, rgba(6, 5, 6, 1) 10%, rgba(201, 37, 179, 1) 67%, rgba(6, 5, 6, 1) 60%);
 
 }
 
@@ -39,7 +39,7 @@ form:before {
     width: 240px;
     height:5px;
     border-radius:100%;
-    left:10%;
+    left: 10%;
     top:-2px;
     box-shadow: 0 0 6px 4px rgba(201,37,179,1);
 }
@@ -123,10 +123,6 @@ input[type=password]:hover,
 label:hover ~ input[type=text],
 label:hover ~ input[type=password] {
  	background:#27292c;
-}
-
-.captcha-image{
-  margin-left: 100px;
 }
 
 .titulo{

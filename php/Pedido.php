@@ -20,7 +20,7 @@ include "header.php";
 <body>
     
 <form class="animate__animated animate__backInDown" method="POST">
-    <h1>Datos de envío</h1>
+    <h1 class="titulo">Datos de envío</h1>
     <div class="inset">
        
       <p>
