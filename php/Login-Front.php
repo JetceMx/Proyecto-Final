@@ -17,7 +17,7 @@ include "header.php";
 </head>
 
 <body>
-
+ 
   <form class="animate__animated animate__backInDown" method="POST" action="login.php">
     <h1>Iniciar Sesion</h1>
     <div class="inset">
