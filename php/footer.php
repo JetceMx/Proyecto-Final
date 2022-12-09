@@ -16,7 +16,7 @@
         <div class="grupo-1">
             <div class="box">
                 <figure>
-                    <a href="index.php">
+                    <a href="Inicio.php">
                         <img src="../images/logo (1).gif" alt="Logo Sabinito Games">
                     </a>
                 </figure>

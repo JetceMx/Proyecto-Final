@@ -12,7 +12,7 @@
 
 <body>
     <header class="encabezado">
-        <a href="index.php" class="logo">
+        <a href="Inicio.php" class="logo">
             <img src="../images/logo (1).gif" alt="Logo Sabinito Games">
             <h2 class="nombre-empresa">Sabinito Games</h2>
         </a>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <nav>
-            <a href="index.php" class="nav-link">Inicio</a>
+            <a href="Inicio.php" class="nav-link">Inicio</a>
             <a href="#" class="nav-link">Tienda</a>
             <a href="#" class="nav-link">Acerca De</a>
             <a href="Contactanos.php" class="nav-link">Contáctanos</a>
