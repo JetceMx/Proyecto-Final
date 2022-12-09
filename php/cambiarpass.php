@@ -11,7 +11,7 @@
         die('Error en la conexion');
 
     }else{
-        echo $_POST["contranew"];
+        
         $user2=$_POST["user"];
         $aux=$_POST["contranew"];
         $new=base64_encode($aux);
