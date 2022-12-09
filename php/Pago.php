@@ -25,6 +25,7 @@ include "header.php";
           <h1>Pago con Tarjetas Bancarias</h1>
            
             <div class="Tarjetas">
+               
                 <div class="left">
                     <input id="pp" type="radio" name="payment" />
                     <div class="radio"></div>
@@ -47,20 +48,25 @@ include "header.php";
             </div>
             
             <div class="row cardholder">
+               
                 <div class="info">
                     <label for="cardholdername">Nombre</label>
                     <input placeholder="Introduce tu Nombre" id="cardholdername" type="text" />
                 </div>
+                
             </div>
             
             <div class="row number">
+               
                 <div class="info">
                     <label for="cardnumber">Numero de Tarjeta</label>
                     <input id="cardnumber" type="text" pattern="[0-9]" maxlength="16" placeholder="8888-8888-8888-8888"/>
                 </div>
+                
             </div>
             
             <div class="row details">
+               
                 <div class="left">
                     <label for="expiry-date">Expira</label>
                     <select id="expiry-date">
@@ -99,12 +105,13 @@ include "header.php";
                 </div>
                 <div class="right">
                     <label for="cvv">CVC/CVV</label>
-                    <input type="text" maxlength="3" pattern="[0-9]" placeholder="123"/>
+                    <input type="text" maxlength="3" pattern="[0-9]" id="CVV" placeholder="123" />
                 </div>
+                
             </div>
     
     <div class="button">
-        <button type="submit">Pagar</button>
+        <button type="submit" id="Sub">Pagar</button>
     </div>
     
     </div>

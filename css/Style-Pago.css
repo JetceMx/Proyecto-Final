@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 750px;
     flex-direction: column;
     color: white;
   background: rgb(6,5,6);
@@ -15,14 +15,41 @@ background: linear-gradient(180deg, rgba(6,5,6,1) 5%, rgba(201,37,179,1) 50%, rg
     align-items: center;
     justify-content: center;
     width: 520px;
-    height: 400px;
+    height: 700px;
     border: 3px solid #292C58;
+    border-radius: 20px;
+    background: rgb(6,5,6);
+    background: radial-gradient(circle, rgba(6,5,6,1) 35%, rgba(78,37,201,1) 100%);
 }
     
 
 .Tarjetas{
     display: flex;
     flex-direction: row;
+}
+
+#cardholdername,#cardnumber,#expiry-date,#CVV,#Sub{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 4px solid #c925b3;
+  border-radius: 9px;
+  opacity: 0.8;
+}
+
+#Sub{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 4px solid #c925b3;
+  border-radius: 9px;
+  opacity: 1;
 }
 
     
