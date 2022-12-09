@@ -15,7 +15,7 @@
         $user2=$_POST["user"];
         $aux=$_POST["contranew"];
         $new=base64_encode($aux);
-        $actualizar="UPDATE login.usuarios SET contraseña='$new' WHERE usuario='$user2'";
+        $actualizar="UPDATE u780407792_BD.usuarios SET contraseña='$new' WHERE usuario='$user2'";
         $conexion->query($actualizar);
         ?>
         <script>

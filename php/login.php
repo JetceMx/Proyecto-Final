@@ -56,10 +56,11 @@ if ($conexion->connect_errno) {
         $_SESSION["contador"]=0;
         
         $aux="temp";
-        $new=base64_encode($aux);
-        $actualizar="UPDATE login.usuarios SET contraseña='$new' WHERE usuario='$usr'";
+        $aux2=$aux;
+        $new=base64_encode($aux2);
+        $actualizar="UPDATE u780407792_BD.usuarios SET contraseña='$new' WHERE usuario='$usr'";
         $conexion->query($actualizar);
-       header("location: recu.php");
+        header("location: recu.php");
     }
 ?>
 <!-- Por mejorar esta alerta con alguna de las que hicimos en clase -->
