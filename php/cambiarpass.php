@@ -1,8 +1,8 @@
 <?php
     $servidor = 'localhost';
-    $cuenta = 'root';
-    $password = '';
-    $bd = 'login';
+    $cuenta = 'u780407792_Admin1';
+    $password = 'Qv4WEmXN';
+    $bd = 'u780407792_BD';
     
     //conexion a la base de datos
     $conexion = new mysqli($servidor, $cuenta, $password, $bd);
@@ -20,7 +20,7 @@
         ?>
         <script>
             alert('Tu cuenta a sido desbloqueada ');
-           location.href = "Login-front.php";
+           location.href = "Login-Front.php";
         </script>
         <?php
     }

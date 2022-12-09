@@ -48,7 +48,7 @@ include "header.php";
 
     <p class="p-container">
       <!--<span>Crear Cuenta</span> -->
-      <a href="Registro-front.php" class linkr>Crear cuenta</a>
+      <a href="Registro-Front.php" class linkr>Crear cuenta</a>
       <input type="submit" name="go" id="go" value="Enviar">
     </p>
   </form>

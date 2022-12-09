@@ -40,8 +40,8 @@ if ($conexion->connect_errno) {
     mysqli_close($conexion);
     ?>
     <script>
-        alert('Las claves no coinciden');
-        location.href = "login-front.php";
+        alert('Tu cuenta a sido creada');
+        location.href = "Login-Front.php";
     </script>
     <?php
 }
