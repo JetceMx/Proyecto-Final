@@ -2,9 +2,9 @@
 session_start();
 
 $servidor = 'localhost';
-$cuenta = 'root';
-$password = '';
-$bd = 'login';
+$cuenta = 'u780407792_Admin1';
+$password = 'Qv4WEmXN';
+$bd = 'u780407792_BD';
 
 //conexion a la base de datos
 $conexion = new mysqli($servidor, $cuenta, $password, $bd);
