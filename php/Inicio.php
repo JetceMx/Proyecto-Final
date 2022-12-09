@@ -54,7 +54,7 @@ include_once "header.php";
         <h1>BOLETÍN</h1>
         <p>Suscríbete al boletín de noticias de productos y ofertas especiales</p>
         <p>Email *</p>
-        <form action="correo_recu.php" method="$_POST">
+        <form action="correo_cupon.php" method="POST">
             <input type="email" name="cupon" class="campo" placeholder="Introduce tu correo electrónico">
             <input type="submit" value="Suscribir" class="btn-Sus">
         </form>
