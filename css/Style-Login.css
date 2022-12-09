@@ -146,7 +146,3 @@ label:hover~input[type=text],
 label:hover~input[type=password] {
   background: #27292c;
 }
-
-.captcha-image {
-  margin-right: 100px;
-}
