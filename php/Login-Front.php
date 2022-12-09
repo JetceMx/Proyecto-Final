@@ -35,7 +35,10 @@ include "header.php";
       </p>
     </div>
     <div class="p-container">
-      <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+      <div style="margin-left: 10px;">
+        <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+      </div>
+      
       <br>
       <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
     </div>

@@ -65,7 +65,7 @@ if ($conexion->connect_errno) {
 ?>
 <!-- Por mejorar esta alerta con alguna de las que hicimos en clase -->
 <script>
-    alert('No se encontró ningun usuario!...Recuerda que tienes 3 intentos para Iniciar Sesion');
+    alert('No se encontró ningun usuario!...Recuerda que tienes intentos para Iniciar Sesion');
     location.href = "Login-Front.php";
 </script>
 
