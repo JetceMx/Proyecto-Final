@@ -3,7 +3,7 @@
 
 $mail = $_POST['recu'];
 $asunto = 'Sabinito Games';
-$msj=" temp";
+$msj="La contraseña de tu cuenta es: temp";
 
 mail($mail,$asunto,$msj);
 ?>
