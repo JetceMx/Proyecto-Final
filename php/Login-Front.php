@@ -35,7 +35,7 @@ include "header.php";
       </p>
     </div>
     <div class="p-container">
-      <div style="margin-left: 10px;">
+      <div style="margin-right: 20px;">
         <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
       </div>
       
