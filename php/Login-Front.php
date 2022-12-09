@@ -34,7 +34,7 @@ include "header.php";
         <label for="remember">Recordar Usuario</label>
       </p>
     </div>
-      <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image" style="margin-right: 30px;">
+      <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image" style="margin-right: 50px;">
         <br>
       <i class="fas fa-redo refresh-captcha"></i>
     <div class="p-container">
