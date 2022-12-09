@@ -9,5 +9,5 @@ mail($mail,$asunto,$msj);
 ?>
 <script>
     alert('Tu cuenta a sido desbloqueada ');
-   location.href = "actualizar.php";
+   location.href = "Login-Front.php";
 </script>
