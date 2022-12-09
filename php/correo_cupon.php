@@ -7,3 +7,7 @@ $men="<img src='../images/cupon.png'>";
 $header = "Ten un cupon por suscribirte!!!!!"."\r\n";
 mail($mail,$asunto,$men,$header);
 ?>
+<script>
+    
+   location.href = "index.php";
+</script>
