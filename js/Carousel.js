@@ -7,7 +7,7 @@ class Carousel {
     this.carouselData = [
       {
         'id': '1',
-        'src': 'https://img.wattpad.com/0faa6041032b0531969b80d647da3cf2d255a12e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f69485072636a6b5a7554716d57513d3d2d34382e313562383563376639353935326366633639353030373636353736332e6a7067?s=fit&w=720&h=720',
+        'src': '../images/Productos/control3.png',
       },
       {
         'id': '2',
@@ -50,7 +50,7 @@ class Carousel {
       const carouselItem = item.src ? document.createElement('img') : document.createElement('div');
 
       container.append(carouselItem);
-      
+
       // Add item attributes
       carouselItem.className = `carousel-item carousel-item-${index + 1}`;
       carouselItem.src = item.src;
@@ -146,7 +146,7 @@ class Carousel {
     };
     const lastItem = this.carouselData.length;
     const lastIndex = this.carouselData.findIndex(item => item.id == lastItem);
-    
+
     // Assign properties for new carousel item
     Object.assign(newItem, {
       id: `${lastItem + 1}`,
@@ -169,8 +169,8 @@ class Carousel {
       playBtn.classList.remove('playing');
 
       // Remove setInterval
-      clearInterval(this.carouselPlayState); 
-      this.carouselPlayState = null; 
+      clearInterval(this.carouselPlayState);
+      this.carouselPlayState = null;
     } else {
       // Add class to change to pause button state/appearance
       playBtn.classList.add('playing');

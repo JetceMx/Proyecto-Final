@@ -25,7 +25,7 @@
         <nav>
             <a href="Inicio.php" class="nav-link">Inicio</a>
             <a href="#" class="nav-link">Tienda</a>
-            <a href="#" class="nav-link">Acerca De</a>
+            <a href="AcercaDe.php" class="nav-link">Acerca De</a>
             <a href="Contactanos.php" class="nav-link">Contáctanos</a>
             <a href="Ayuda.php" class="nav-link">Ayuda</a>
             <?php

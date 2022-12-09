@@ -20,39 +20,32 @@ include "header.php";
     </div>
     <br>
     <div class="ad_contenido">
-        <?php
-        date_default_timezone_set("America/Mexico_City");
-        echo date("F j, Y, g:i a");
-        ?>
         <h2> ¿Quiénes somos? </h1>
-            Somos una compañía de capacitación tecnológica, certificando y capacitando a universitarios y
-            profesionistas,
-            generando especialistas en alta tecnología para cubrir la gran demanda del mercado. Contamos con alianzas
-            con las primordiales
-            empresas, marcas y universidades de la nación, así como con proyectos gubernamentales, para una fácil
-            colocación laboral.
-    </div>
-    <br>
-    <div class="ad_contenido">
-        <h2>¿Porqué certificarte con nosotros? </h2>
-        Nuestras certificaciones ofrecen una ventaja profesional y competitiva, con reconocimiento a nivel global y
-        aprobada por las
-        empresas, valorada por nuestras amplias aptitudes.
+            <p>
+                Somos una tienda en linea 100% mexicana, dedicada a la venta de accesorios,
+                videojuegos y consolas, con el mejor precio del mercado y grandes ofertas.
+            </p>
     </div>
     <br>
     <div class="ad_contenido">
         <h2>Misión</h2>
-        Ofrecer las mejores certificaciones a los universitarios, profesionistas y programadores del sector tecnológico
-        para cubrir
-        las necesidades de las empresas y el mercado, desarrollar que sean de calidad y efectividad.
+        <p>
+            Sabinito Games trabaja sin descanso para proporcionar la mejor experiencia de entretenimiento, escuchando
+            activamente las diferentes expectativas de los clientes, tratándolos con esmero, cortesía y honestidad, y
+            ofreciendo excelentes productos y servicios (trabajamos en juegos excelentes, con gente excelente, para
+            personas excelentes). Y de esta forma, devolver al público adulto las ganas de JUGAR.
+        </p>
     </div>
     <br>
     <div class="ad_contenido">
         <h2>Visión</h2>
-        Ser líder de certificaciones de talla internacional y nacional. Generar un país de talentos, que realicen los
-        mejores sistemas
-        y desarrollo de innovaciones, y poder sustentar el mercado laboral.
+        <p>
+            Ser una empresa líder en el sector del ocio, centrando nuestros esfuerzos en la innovación y en la
+            excelencia, tanto en la calidad del servicio como en la atención al cliente. Ofrecer diversión, emoción y
+            sensaciones con la mejor y más variada oferta de juego.
+        </p>
     </div>
+    <br>
     <?php
     include "footer.php";
     ?>
