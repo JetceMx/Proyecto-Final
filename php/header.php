@@ -111,7 +111,7 @@
                 <i class="fa-solid fa-user dropbtn" onclick="myFunction()"></i>
                 <div id="myDropdown" class="dropdown-content">
                     <hr>
-                    <a href="Login-front.php">Iniciar Sesion</a>
+                    <a href="Login-Front.php">Iniciar Sesion</a>
                 </div>
             </div>
             <?php
