@@ -32,8 +32,14 @@ include_once "header.php";
 
     <div id="recuadro-2">
         <h1>MÁS VENDIDOS</h1>
+
+        <?php
+        include_once"Carousel.php";
+        ?>
+
     </div>
 
+    <br><br><br><br><br><br><br><br><br>
 
     <div id="recuadro-3">
         <div id="img-categoria" class="categoria">
