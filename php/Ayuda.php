@@ -25,9 +25,6 @@ include "header.php";
 <body class="Cuerpo">
 
     <form class="animate__animated animate__backInDown" method="POST" action="Registro.php">
-
-
-
         <div class="ayuda ">
 
             <h1 class="titulo">Preguntas más frecuentes</h1>
@@ -110,15 +107,12 @@ include "header.php";
                 </div>
             </div>
         </div>
-<<<<<<< Updated upstream
 
     </form>
-=======
     </div>
 
 
-</form>
->>>>>>> Stashed changes
+    </form>
 
     <?php
     include "footer.php";

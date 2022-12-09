@@ -6,67 +6,68 @@ include "header.php";
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/Style-Global.css">
-  <link rel="stylesheet" href="../css/Style-Pago.css">
-  <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
-  <title>Pago</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Style-Global.css">
+    <link rel="stylesheet" href="../css/Style-Pago.css">
+    <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
+    <title>Pago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-   
-   <div class="container">
-          
-          <div class="card">
-          
-          <h1>Pago con Tarjetas Bancarias</h1>
-           
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Pago con Tarjetas Bancarias</h1>
+
             <div class="Tarjetas">
-               
+
                 <div class="left">
                     <input id="pp" type="radio" name="payment" />
                     <div class="radio"></div>
-                    <label for="pp">  </label>
+                    <label for="pp"> </label>
                 </div>
                 <div class="right">
                     <img src="../images/Visa.png" alt="Visa" height="150" width="150" />
                 </div>
-                
+
                 <div class="left">
                     <input id="cd" type="radio" name="payment" />
                     <div class="radio"></div>
-                    <label for="cd">  </label>
+                    <label for="cd"> </label>
                 </div>
-                
+
                 <div class="right">
                     <img src="../images/MasterCard.png" alt="mastercard" height="150" width="150" />
                 </div>
-                
+
             </div>
-            
+
             <div class="row cardholder">
-               
+
                 <div class="info">
                     <label for="cardholdername">Nombre</label>
                     <input placeholder="Introduce tu Nombre" id="cardholdername" type="text" />
                 </div>
-                
+
             </div>
-            
+
             <div class="row number">
-               
+
                 <div class="info">
                     <label for="cardnumber">Numero de Tarjeta</label>
-                    <input id="cardnumber" type="text" pattern="[0-9]" maxlength="16" placeholder="8888-8888-8888-8888"/>
+                    <input id="cardnumber" type="text" pattern="[0-9]" maxlength="16"
+                        placeholder="8888-8888-8888-8888" />
                 </div>
-                
+
             </div>
-            
+
             <div class="row details">
-               
+
                 <div class="left">
                     <label for="expiry-date">Expira</label>
                     <select id="expiry-date">
@@ -84,7 +85,7 @@ include "header.php";
                         <option value="12">12</option>
                     </select>
                     <span>/</span>
-                     <select id="expiry-date">
+                    <select id="expiry-date">
                         <option>YYYY</option>
                         <option value="2016">2016</option>
                         <option value="2017">2017</option>
@@ -107,20 +108,21 @@ include "header.php";
                     <label for="cvv">CVC/CVV</label>
                     <input type="text" maxlength="3" pattern="[0-9]" id="CVV" placeholder="123" />
                 </div>
-                
+
             </div>
-    
-    <div class="button">
-        <button type="submit" id="Sub">Pagar</button>
+
+            <div class="button">
+                <button type="submit" id="Sub">Pagar</button>
+            </div>
+
+        </div>
+
     </div>
-    
-    </div>
-    
-</div>
-   
+
     <?php
-  include "footer.php";
-  ?>
-    
+    include "footer.php";
+    ?>
+
 </body>
+
 </html>

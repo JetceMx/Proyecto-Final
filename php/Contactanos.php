@@ -15,10 +15,7 @@ include "header.php";
     <link rel="stylesheet" href="../css/Style-Contactanos.css">
     <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
     <title>Coctactanos</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="Cuerpo">
@@ -28,7 +25,7 @@ include "header.php";
 
     <table>
 
-        <td class="animate__animated animate__backInLeft" >
+        <td class="animate__animated animate__backInLeft">
             <div class="Contactanos">
 
                 <p>gamessabinito@gmail.com</p>
@@ -48,7 +45,7 @@ Mexico.</pre>
 
 
 
-         <td class="animate__animated animate__backInRight" >
+        <td class="animate__animated animate__backInRight">
 
             <div class="Formulario">
 
@@ -62,7 +59,7 @@ Mexico.</pre>
                         </tr>
 
                         <tr>
-                            <td><input type="text" class="Texto1"  required></td>
+                            <td><input type="text" class="Texto1" required></td>
                             <td><input type="text" class="Texto2" name="email" required></td>
                         </tr>
 
@@ -85,7 +82,7 @@ Mexico.</pre>
 
                         <tr>
 
-                            <td colspan="2"><input type="submit" class="Boton" value="ENVIAR" ></td>
+                            <td colspan="2"><input type="submit" class="Boton" value="ENVIAR"></td>
 
                         </tr>
 
@@ -107,9 +104,9 @@ Mexico.</pre>
 
 
 
- <?php
-    include "footer.php";
-    ?>
+    <?php
+ include "footer.php";
+ ?>
 
 </body>
 

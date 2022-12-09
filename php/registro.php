@@ -11,7 +11,7 @@ $conexion = new mysqli($servidor, $cuenta, $password, $bd);
 if ($conexion->connect_errno) {
     die('Error en la conexion');
 } else {
-   
+
     $usr = $_POST["txtusr"];
     $nombre = $_POST['txtnombre'];
     $correo = $_POST['txtcorreo'];
@@ -38,12 +38,12 @@ if ($conexion->connect_errno) {
 
     //print_r(($return));
     mysqli_close($conexion);
-    ?>
-    <script>
-        alert('Tu cuenta a sido creada');
-        location.href = "Login-Front.php";
-    </script>
-    <?php
+?>
+<script>
+    alert('Tu cuenta a sido creada');
+    location.href = "Login-Front.php";
+</script>
+<?php
 }
 
-?>
+    ?>

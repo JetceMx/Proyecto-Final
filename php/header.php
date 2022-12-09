@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/Style-Global.css">
     <link rel="stylesheet" href="../css/Style-header.css">
     <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../images/consola-de-juego.png" type="image/x-icon">
 </head>
 
 <body>

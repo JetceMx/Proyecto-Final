@@ -3,8 +3,8 @@
 
 session_start();
 
- $SESSION_UNSET;
-$_SESSION['usuario']="";
+$SESSION_UNSET;
+$_SESSION['usuario'] = "";
 session_destroy();
 
 # Finalmente lo redireccionamos al formulario

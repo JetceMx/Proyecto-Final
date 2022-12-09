@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/Style-Global.css">
     <link rel="stylesheet" href="../css/Style-footer.css">
     <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
-    <title>Footer</title>
+    <title></title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
                 <h2>Siguenos</h2>
                 <div class="red-social">
                     <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="https://www.instagram.com/sabi.nitogames/" class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-youtube"></a>
                 </div>

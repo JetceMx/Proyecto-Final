@@ -34,7 +34,7 @@ include_once "header.php";
         <h1>MÁS VENDIDOS</h1>
 
         <?php
-        include_once"Carousel.php";
+        include_once "Carousel.php";
         ?>
 
     </div>

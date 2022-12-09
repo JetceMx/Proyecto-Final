@@ -17,28 +17,28 @@ include "header.php";
 </head>
 
 <body>
-    <div class="formulario">
+  <div class="formulario">
     <form class="animate__animated animate__backInDown" method="POST" action="cambiarpass.php">
-    <h1>Cambiar Contraseña</h1>
-    <div class="inset">
-      <p>
-        <label for="email">Escribe tu usuario</label>
-        <input type="text" name="user" id="pass">
-      </p>
-      <p>
-        <label for="email">Contraseña</label>
-        <input type="password" name="contranew" id="pass">
-      </p>
-      <p>
-        <label for="password"> Vuelve a ingresar la Contraseña</label>
-        <input type="password" name="contranew2" id="Pass">
-      </p>
-      <p class="p-container">
-      <input type="submit" name="go" id="cambiar" value="Enviar">
-    </p>
-  </form>
-    </div>
-<br><br><br>
+      <h1>Cambiar Contraseña</h1>
+      <div class="inset">
+        <p>
+          <label for="email">Escribe tu usuario</label>
+          <input type="text" name="user" id="pass">
+        </p>
+        <p>
+          <label for="email">Contraseña</label>
+          <input type="password" name="contranew" id="pass">
+        </p>
+        <p>
+          <label for="password"> Vuelve a ingresar la Contraseña</label>
+          <input type="password" name="contranew2" id="Pass">
+        </p>
+        <p class="p-container">
+          <input type="submit" name="go" id="cambiar" value="Enviar">
+        </p>
+    </form>
+  </div>
+  <br><br><br>
   <?php
   include "footer.php";
   ?>
