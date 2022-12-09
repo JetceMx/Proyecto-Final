@@ -15,5 +15,5 @@ mail($mail,$asunto,$men);
 ?>
 <script>
     
-   location.href = "index.php";
+   location.href = "Inicio.php";
 </script>
