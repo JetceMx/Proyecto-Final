@@ -1,6 +1,5 @@
 body {
-    background: rgb(6, 5, 6);
-    background: linear-gradient(180deg, rgba(6, 5, 6, 1) 5%, rgba(201, 37, 179, 1) 50%, rgba(6, 5, 6, 1) 60%);
+    background-image: linear-gradient(178.6deg, #010002 16.4%, #8a1d7b 56.1%);
 }
 
 /* CARRUSEL DESDE AQUI  */
@@ -8,14 +7,14 @@ body {
 /* Slideshow container */
 #slideshow-container {
     position: relative;
-    margin: auto;
+    height: 380px;
 }
 
 /* Hide the images by default */
 .mySlides {
     width: 100%;
-    height: 400px;
     display: none;
+    height: 380px;
 }
 
 /* Fading animation */
@@ -36,11 +35,20 @@ body {
 
 /* FIN CARRUSEL */
 
+#recuadro-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    height: 400px;
+    color: white;
+
+}
+
+
 #recuadro-2 {
-    background-image: url(../images/background_1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     width: 100%;
     height: 400px;
     color: white;
@@ -50,13 +58,13 @@ body {
 }
 
 #recuadro-3 {
+    background-color: #010002e7;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #212121;
     width: 100%;
-    height: 400px;
+    height: 500px;
 }
 
 .categoria {
@@ -67,11 +75,19 @@ body {
 }
 
 .categoria img {
-    width: 220px;
-    height: 200px;
+    border-radius: 15px;
+    width: 350px;
+    height: 300px;
 }
 
 #recuadro-4 {
+    background: #0100024f;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
     text-align: center;
     width: 100%;
     height: 400px;
@@ -80,4 +96,42 @@ body {
 #recuadro-4 img {
     width: 80%;
     height: 400px;
+}
+
+#recuadro-4 form {
+    width: 45%;
+    display: flex;
+}
+
+#recuadro-4 form .campo {
+    width: 100%;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 3px 0px 0px 3px;
+}
+
+#recuadro-4 form .btn-Sus {
+    padding: 15px 15px;
+    border: none;
+    border-radius: 0px 3px 3px 0px;
+    background: #3D0E37;
+    cursor: pointer;
+    color: white;
+    outline: 0px;
+}
+
+#recuadro-5 {
+    border: 1px solid black;
+    background-color: #010002e7;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+}
+
+.divisor {
+    width: 100%;
+    height: 10px;
+    background-color: #010002e7;
+    border: none;
 }

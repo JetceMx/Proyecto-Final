@@ -27,36 +27,94 @@ include_once "header.php";
     <!-- FIN CARRUSEL -->
 
     <div id="recuadro-1">
-        <h2>Más vendidos!</h2>
+        <h1>CADA DIA MÁS GAMER</h2>
     </div>
 
     <div id="recuadro-2">
-        <h2>Cada dia más gamer!</h2>
+        <h1>MÁS VENDIDOS</h1>
     </div>
 
+
     <div id="recuadro-3">
-        <div class="categoria">
-            <img src="../images/Productos/sx.png" alt="">
+        <div id="img-categoria" class="categoria">
+            <img src="../images/Consolas.webp" alt="">
             <h2>Consolas</h2>
         </div>
         <div class="categoria">
-            <img src="../images/Productos/raton3_copia_2.png" alt="">
+            <img src="../images/Accesorios.jpg" alt="">
             <h2>Accesorios</h2>
         </div>
         <div class="categoria">
-            <img src="../images/Productos/CONTROL1.png" alt="">
+            <img src="../images/Controles.jpg" alt="">
             <h2>Controles</h2>
         </div>
     </div>
 
     <div id="recuadro-4">
-        <img src="../images/cupon.png" alt="">
+        <h1>BOLETÍN</h1>
+        <p>Suscríbete al boletín de noticias de productos y ofertas especiales</p>
+        <p>Email *</p>
+        <form action="#">
+            <input type="email" class="campo" placeholder="Introduce tu correo electrónico">
+            <input type="submit" value="Suscribir" class="btn-Sus">
+        </form>
+    </div>
+
+    <div id="recuadro-5">
+        <h2>Recuadro 5</h2>
     </div>
 
     <!-- Scripts -->
     <script src="../js/Carrusel.js"></script>
-    <br>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        var current = 0;
+        var imagenes = new Array();
 
+        $(document).ready(function () {
+            var numImages = 6;
+            if (numImages <= 3) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
+            }
+
+            $('.left-arrow').on('click', function () {
+                if (current > 0) {
+                    current = current - 1;
+                } else {
+                    current = numImages - 3;
+                }
+
+                $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
+
+                return false;
+            });
+
+            $('.left-arrow').on('hover', function () {
+                $(this).css('opacity', '0.5');
+            }, function () {
+                $(this).css('opacity', '1');
+            });
+
+            $('.right-arrow').on('hover', function () {
+                $(this).css('opacity', '0.5');
+            }, function () {
+                $(this).css('opacity', '1');
+            });
+
+            $('.right-arrow').on('click', function () {
+                if (numImages > current + 3) {
+                    current = current + 1;
+                } else {
+                    current = 0;
+                }
+
+                $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
+
+                return false;
+            });
+        });
+    </script>
     <?php
     include "footer.php";
     ?>

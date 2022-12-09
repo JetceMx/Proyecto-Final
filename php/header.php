@@ -26,8 +26,8 @@
             <a href="index.php" class="nav-link">Inicio</a>
             <a href="#" class="nav-link">Tienda</a>
             <a href="#" class="nav-link">Acerca De</a>
-            <a href="#" class="nav-link">Contáctanos</a>
-            <a href="#" class="nav-link">Ayuda</a>
+            <a href="Contactanos.php" class="nav-link">Contáctanos</a>
+            <a href="Ayuda.php" class="nav-link">Ayuda</a>
             <?php
             date_default_timezone_set('America/Mexico_City');
             $today = getdate();
