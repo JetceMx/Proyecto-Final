@@ -61,7 +61,7 @@ include_once "header.php";
     </div>
 
     <div id="recuadro-5">
-        <h2>Recuadro 5</h2>
+        <h2>Recuadro con cambios para que neta se vean</h2>
     </div>
 
     <!-- Scripts -->
