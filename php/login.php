@@ -42,7 +42,7 @@ if ($conexion->connect_errno) {
             $_SESSION["pass"]=$_POST["txtpassword"];
             ?>
                 <script>
-                    location.href = "index.php";
+                    location.href = "Inicio.php";
                 </script>
             <?php
         } else {
