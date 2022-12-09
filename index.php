@@ -1,3 +1,3 @@
 <script>
-    location.href = "php/inicio.php";
+    location.href = "php/Inicio.php";
 </script>
