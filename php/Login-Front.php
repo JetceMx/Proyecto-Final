@@ -34,13 +34,10 @@ include "header.php";
         <label for="remember">Recordar Usuario</label>
       </p>
     </div>
-    <div class="p-container">
-      <div style="margin-right: 100px;">
-        <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image">
+      <img src="get_captcha.php" alt="CAPTCHA" class="captcha-image">
         <br>
-        <i class="fas fa-redo refresh-captcha"></i>
-      </div>
-      
+      <i class="fas fa-redo refresh-captcha"></i>
+    <div class="p-container">
       <br>
       <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
     </div>
