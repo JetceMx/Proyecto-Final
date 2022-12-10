@@ -73,10 +73,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `producto_nombre`, `producto_precio`, `producto_imagen`, `producto_codigo`) VALUES
-(2, 'Logitech G203 LIGHTSYNC Mouse Gaming con Iluminación RGB Personalizable, 6 Botones Programables Seguimiento de hasta 8,000 DPI, Ultra-ligero - Negro', '300', 'images/G203.jpg', '002'),
-(3, 'Logitech M350 Pebble, Mouse inalámbrico con Bluetooth o receptor USB de 2,4 GHz, Silencioso y Minimalista, con clic silencioso para Laptop, iPad, PC y Mac - Rosa', '419', 'images/M350.jpg', '003'),
-(4, 'Control Inalámbrico Xbox - Robot White', '1290', 'images/mXBOX.jpg', '004'),
-(295042, 'NORCHE HUO JI CQ63 Teclado mecánico inalámbrico para Juegos, Bluetooth 5.0, retroiluminación LED RGB, Interruptor Azul, Compacto de 63 Teclas, antifantasma, Compatible con PC, portátil, Smartphone', '800', 'images/TecladoNorche.jpg', '001');
+(2, 'Logitech G203 LIGHTSYNC Mouse Gaming con Iluminación RGB Personalizable, 6 Botones Programables Seguimiento de hasta 8,000 DPI, Ultra-ligero - Negro', '300', 'images/Productos/G203.jpg', '002'),
+(3, 'Logitech M350 Pebble, Mouse inalámbrico con Bluetooth o receptor USB de 2,4 GHz, Silencioso y Minimalista, con clic silencioso para Laptop, iPad, PC y Mac - Rosa', '419', 'images/Productos/M350.jpg', '003'),
+(4, 'Control Inalámbrico Xbox - Robot White', '1290', 'images/Productos/mXBOX.jpg', '004'),
+(295042, 'NORCHE HUO JI CQ63 Teclado mecánico inalámbrico para Juegos, Bluetooth 5.0, retroiluminación LED RGB, Interruptor Azul, Compacto de 63 Teclas, antifantasma, Compatible con PC, portátil, Smartphone', '800', 'images/Productos/TecladoNorche.jpg', '001');
 
 --
 -- Índices para tablas volcadas

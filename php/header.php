@@ -26,7 +26,7 @@
         </div>
         <nav>
             <a class="a_general" href="Inicio.php" class="nav-link">Inicio</a>
-            <a class="a_general" href="#" class="nav-link">Tienda</a>
+            <a class="a_general" href="Tienda.php" class="nav-link">Tienda</a>
             <a class="a_general" href="AcercaDe.php" class="nav-link">Acerca De</a>
             <a class="a_general" href="Contactanos.php" class="nav-link">Contáctanos</a>
             <a class="a_general" href="Ayuda.php" class="nav-link">Ayuda</a>
