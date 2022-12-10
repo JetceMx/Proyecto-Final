@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/Style-header.css">
     <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
     <link rel="icon" href="../images/consola-de-juego.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 </head>
 
 <body>
