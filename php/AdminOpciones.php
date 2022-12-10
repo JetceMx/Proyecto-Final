@@ -19,13 +19,13 @@ include "header.php";
     <div class="opcionesAdmin">
         <h1>Bienvenido !</h1>
         <div class="opcion">
-            <a href="#">Alta de productos</a>
+            <a href="AltaProd.php">Alta de productos</a>
         </div>
         <div class="opcion">
-            <a href="#">Modificar productos</a>
+            <a href="ModiProd.php">Modificar productos</a>
         </div>
         <div class="opcion">
-            <a href="#">Borrar productos</a>
+            <a href="BajaProd.php">Borrar productos</a>
         </div>
         <div class="opcion">
             <a href="#">Ver gráficas</a>
