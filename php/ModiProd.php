@@ -52,7 +52,7 @@ if (isset($_POST['MOD'])) {
     $cuatro = $_POST["Desc2"];
     $cinco = $_POST["Exist2"];
     $seis = $_POST["Precio2"];
-    $siete = $_POST["Img2"];
+    $siete = addslashes(file_get_contents($_FILES['IMG2']['tmp_name']));
 
     $Modificarl = $_SESSION["Modificar2"];
 
@@ -110,15 +110,21 @@ if (isset($_POST['MOD'])) {
                     echo '<option value="' . $fila["IDProducto"] . '">' . $fila["Nombre"] . '</option>';
                     //proceso de concatenacion de datos
             
-                    $salida .= '<tr>';
-                    $salida .= '<td>' . $fila['IDProducto'] . '</td>';
-                    $salida .= '<td>' . $fila['Nombre'] . '</td>';
-                    $salida .= '<td>' . $fila['Categoria'] . '</td>';
-                    $salida .= '<td>' . $fila['Descripcion'] . '</td>';
-                    $salida .= '<td>' . $fila['Existencia'] . '</td>';
-                    $salida .= '<td>' . $fila['Precio'] . '</td>';
-                    $salida .= '<td>' . $fila['Imagen'] . '</td>';
-                    $salida .= '</tr>';
+                    ?>
+
+                        <tr style="text-align: center;">
+
+                        <td> <?php echo $fila['IDProducto']; ?></td>
+                        <td> <?php echo $fila['Nombre']; ?></td>
+                        <td> <?php echo $fila['Categoria']; ?></td>
+                        <td> <?php echo $fila['Descripcion']; ?></td>
+                        <td> <?php echo $fila['Existencia']; ?></td>
+                        <td> <?php echo $fila['Precio']; ?></td>
+                        <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
+
+                        <?php
+
+                        echo '</tr>';
 
                 } //fin while   
             
@@ -136,7 +142,6 @@ if (isset($_POST['MOD'])) {
 
                         <button><a href="BajaProd.php">Eliminar Datos</a></button>
                         <button><a href="AltaProd.php">Ingresar Datos</a></button>
-                        <button><a href="CompraP.php">Comprar Productos</a></button>
 
                     </form>
                 </div>
@@ -192,7 +197,8 @@ if (isset($_POST['MOD'])) {
 
                     <li class="form-row">
                         <label for="Imagen"> Imagen </label>
-                        <input type="text" id="contra" name="Img2" value="<?php echo $_SESSION['Img']; ?>">
+                        <img src="data:image/jpg;base64,<?php echo base64_encode($_SESSION['Img']); ?>" height="75" width="75">
+                        <input type="file" name="IMG2" id="IMG2">
                     </li>
 
                     <li class="form-row">
