@@ -97,95 +97,113 @@ if ($conexion->connect_errno) {
 ?>
 
 <!-- FRONT DEL FORMULARIO ------------------------------------------------------------------------------------------------------->
+<?php
+include "header.php";
+?>
 
+<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Estilo.css">
+        <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
+        <title>Hola</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    </head>
+    
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title> REGISTRO DE PRODUCTOS </title>
+    <body>
 
-    <style>
-        td,
-        th {
-            padding: 10px;
-
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-4">
-
-                <!-- FORMULARIO PARA DATOS ------------------------------------------------------------------------------------------------------>
-
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post'
-                    enctype="multipart/form-data">
-
-                    <h2> - REGISTRO DE PRODUCTOS - </h2>
-
-                    <div class="form-group">
-                        <label for="ID"> ID del Producto: </label>
-                        <input type="number" REQUIRED name="ID" class="form-control" id="ID" placeholder="" maxlength="5">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Nombre"> Nombre del Producto: </label>
-                        <input type="text" REQUIRED class="form-control" name="Nombre" id="Nombre" placeholder="">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Cat"> Categoria: </label>
-                        <input type="text" REQUIRED id="Cat" name="Cat" class="form-control" placeholder=" ">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Desc"> Descripcion: </label>
-                        <input name="Desc"  REQUIRED type="text" class="form-control" id="Desc" placeholder="">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Exist"> Existencia: </label>
-                        <input name="Exist"  REQUIRED type="number" class="form-control" id="Exist" placeholder="">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Precio"> Precio: </label>
-                        <input name="Precio" REQUIRED type="number" class="form-control" id="Precio" placeholder="">
-                    </div>
+        <!-- FORMULARIO PARA DATOS ------------------------------------------------------------------------------------------------------>
+        <form class="animate__animated animate__backInDown" method="POST">
+            <h1 class="titulo"> - REGISTRO DE PRODUCTOS - </h1>
+            <div class="inset">
+                <div class="container">
+       
+                    <div class="row">
+          
+                        <div class="col-4">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post' enctype="multipart/form-data" >
                     
-                    <div class="form-group">
-                        <label for="Img"> Imagen: </label>
-                        <input type="file" REQUIRED name="IMG" class="form-control">
-                    </div>
+                                <div class="form-group">
+                                    <label for="ID"> ID del Producto: </label>
+                                    <input type="number" name="ID" class="form-control" id="ID" placeholder="" maxlength="5">
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="Nombre"> Nombre del Producto: </label>
+                                    <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="">
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="Cat"> Categoria: </label>
+                                    <input type="text" id="Cat" name="Cat" class="form-control" placeholder=" ">
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="Desc"> Descripcion: </label>
+                                    <input name="Desc" type="text" class="form-control" id="Desc" placeholder="">
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="Exist"> Existencia: </label>
+                                    <input name="Exist" type="number" class="form-control" id="Exist" placeholder="">
+                                    </div>
+                    
+                                <div class="form-group">
+                                    <label for="Precio"> Precio: </label>
+                                    <input name="Precio" type="number" class="form-control" id="Precio" placeholder="">
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="Desc"> Imagen(URL): </label>
+                                    <input name="Img" type="text" class="form-control" id="Img" placeholder="">
+                                </div>
+                    
+                                <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
+                                <br>
+                                <br>
+        <!-- FORMULARIO PARA IMAGEN ----------------------------------------------------------------------------------------------------->
+                    
+                                <form action="LogicaImagen.php" method="post" enctype="multipart/form-data">
+                        
+                                    <div class="form-group">
+                                        <label for="Img"> Imagen: </label>
+                                        <input type="file" name="fileTest" id="fileTest" class="form-control">
+                                    </div>
+                        
+                                    <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR IMAGEN </button>
+                        
+                                </form>
+                    
+                                <br><br>
+                    
+        <!-- BOTONES DE ACCESO ---------------------------------------------------------------------------------------------------------->
+                    
+                                <button class="bttn"><a class="bttn" href="BajaProd.php">Eliminar Datos</a></button>
+                                <button class="bttn"><a class="bttn" href="ModiProd.php">Modificar Datos</a></button>
+                                <button class="bttn"><a  class="bttn" href="CompraP.php">Comprar Producto</a></button>
+                    
+                            </form>
 
-                    <button class="btn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
+                        </div> <!-- fin col -->
+            
+                    </div> <!-- fin row -->
+            
+                </div> <!-- fin container -->
+             
+            </div>
 
-                    <!-- BOTONES DE ACCESO ---------------------------------------------------------------------------------------------------------->
+        </form>
 
-                    <button><a href="BajaProd.php">Eliminar Datos</a></button>
-                    <button><a href="ModiProd.php">Modificar Datos</a></button>
-
-                </form>
-
-            </div> <!-- fin col -->
-
-        </div> <!-- fin row -->
-
-    </div> <!-- fin container -->
-
-    <br><br>
-
-</body>
+        <?php
+        include "footer.php";
+        ?>
+        
+    </body>
 
 </html>

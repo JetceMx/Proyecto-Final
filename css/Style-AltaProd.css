@@ -6,14 +6,13 @@ body {
 	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   color:white;
   font-size:12px;
-  background: rgb(6, 5, 6);
-  background: linear-gradient(180deg, rgba(6, 5, 6, 1) 10%, rgba(201, 37, 179, 1) 67%);
+  background: linear-gradient(180deg,rgba(6, 5, 6, 1) 5%, rgba(201, 37, 179, 1) 67%);
 
 }
 
 form {
  	background:#111; 
-  width:300px;
+  width:500px;
   margin:30px auto;
   border-radius:0.4em;
   border:1px solid #191919;
@@ -37,7 +36,7 @@ form:before {
     content:"";
     display:block;
     position:absolute;
-    width: 240px;
+    width: 400px;
     height:5px;
     border-radius:100%;
     left:10%;
@@ -67,17 +66,19 @@ label {
   padding-bottom:9px;
 }
 
+input[type=file],
+input[type=number],
 input[type=text],
 input[type=password] {
- 	width:100%;
-  padding:8px 5px;
-  color: #efefef;
-  background:linear-gradient(#1f2124, #27292c);
-  border:1px solid #222;
-  box-shadow:
+    width:100%;
+    padding:8px 5px;
+    color: #efefef;
+    background:linear-gradient(#1f2124, #27292c);
+    border:1px solid #222;
+    box-shadow:
     0 1px 0 rgba(255,255,255,0.1);
-  border-radius:0.3em;
-  margin-bottom:20px;
+    border-radius:0.3em;
+    margin-bottom:20px;
 }
 
 label[for=remember]{
@@ -145,4 +146,11 @@ label:hover ~ input[type=password] {
 .titulo{
     margin-top: 5%;
    text-shadow: 6px 5px 7px rgba(201,37,179,1);
+}
+
+.bttn{
+    background-color: #27292c;
+    border-color: transparent;
+    border-radius: 0.3em;
+    color: rgba(201, 37, 179, 1);
 }
