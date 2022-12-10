@@ -23,7 +23,7 @@ if ($conexion->connect_errno) {
         $desc = $_POST['Desc'];
         $exist = $_POST['Exist'];
         $precio = $_POST['Precio'];
-        $img = $_POST['Img'];
+        $img = addslashes(file_get_contents($_FILES['IMG']['tmp_name']));
 
         // SENTENCIA PARA INSERTAR DATOS POR CADENA -MYSQL- ...
 
@@ -63,18 +63,22 @@ if ($conexion->connect_errno) {
 
             echo '</tr>';
 
-            while ($fila = $resultado->fetch_assoc()) { // SE RECORREN LOS DATOS DE LA TABLA...
+            while ($fila = $resultado->fetch_assoc()){ // SE RECORREN LOS DATOS DE LA TABLA...
+                
+                ?>
 
-                echo '<tr style="text-align: center;>';
+                <tr style="text-align: center;">
 
-                echo '<td>' . $fila['IDProducto'] . '</td>';
-                echo '<td>' . $fila['Nombre'] . '</td>';
-                echo '<td>' . $fila['Categoria'] . '</td>';
-                echo '<td>' . $fila['Descripcion'] . '</td>';
-                echo '<td>' . $fila['Existencia'] . '</td>';
-                echo '<td>' . $fila['Precio'] . '</td>';
-                echo '<td>' . $fila['Imagen'] . '</td>';
-
+                <td> <?php echo $fila['IDProducto']; ?></td>
+                <td> <?php echo $fila['Nombre']; ?></td>
+                <td> <?php echo $fila['Categoria']; ?></td>
+                <td> <?php echo $fila['Descripcion']; ?></td>
+                <td> <?php echo $fila['Existencia']; ?></td>
+                <td> <?php echo $fila['Precio']; ?></td>
+                <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
+                
+                <?php
+                
                 echo '</tr>';
             }
 
@@ -132,61 +136,45 @@ if ($conexion->connect_errno) {
 
                     <div class="form-group">
                         <label for="ID"> ID del Producto: </label>
-                        <input type="number" name="ID" class="form-control" id="ID" placeholder="" maxlength="5">
+                        <input type="number" REQUIRED name="ID" class="form-control" id="ID" placeholder="" maxlength="5">
                     </div>
 
                     <div class="form-group">
                         <label for="Nombre"> Nombre del Producto: </label>
-                        <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="">
+                        <input type="text" REQUIRED class="form-control" name="Nombre" id="Nombre" placeholder="">
                     </div>
 
                     <div class="form-group">
                         <label for="Cat"> Categoria: </label>
-                        <input type="text" id="Cat" name="Cat" class="form-control" placeholder=" ">
+                        <input type="text" REQUIRED id="Cat" name="Cat" class="form-control" placeholder=" ">
                     </div>
 
                     <div class="form-group">
                         <label for="Desc"> Descripcion: </label>
-                        <input name="Desc" type="text" class="form-control" id="Desc" placeholder="">
+                        <input name="Desc"  REQUIRED type="text" class="form-control" id="Desc" placeholder="">
                     </div>
 
                     <div class="form-group">
                         <label for="Exist"> Existencia: </label>
-                        <input name="Exist" type="number" class="form-control" id="Exist" placeholder="">
+                        <input name="Exist"  REQUIRED type="number" class="form-control" id="Exist" placeholder="">
                     </div>
 
                     <div class="form-group">
                         <label for="Precio"> Precio: </label>
-                        <input name="Precio" type="number" class="form-control" id="Precio" placeholder="">
+                        <input name="Precio" REQUIRED type="number" class="form-control" id="Precio" placeholder="">
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="Desc"> Imagen(URL): </label>
-                        <input name="Img" type="text" class="form-control" id="Img" placeholder="">
+                        <label for="Img"> Imagen: </label>
+                        <input type="file" REQUIRED name="IMG" class="form-control">
                     </div>
 
                     <button class="btn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
-
-                    <!-- FORMULARIO PARA IMAGEN ----------------------------------------------------------------------------------------------------->
-
-                    <form action="LogicaImagen.php" method="post" enctype="multipart/form-data">
-
-                        <div class="form-group">
-                            <label for="Img"> Imagen: </label>
-                            <input type="file" name="fileTest" id="fileTest" class="form-control">
-                        </div>
-
-                        <button class="btn btn-success" type="submit" name="submit"> ENVIAR IMAGEN </button>
-
-                    </form>
-
-                    <br><br>
 
                     <!-- BOTONES DE ACCESO ---------------------------------------------------------------------------------------------------------->
 
                     <button><a href="BajaProd.php">Eliminar Datos</a></button>
                     <button><a href="ModiProd.php">Modificar Datos</a></button>
-                    <button><a href="CompraP.php">Comprar Producto</a></button>
 
                 </form>
 
