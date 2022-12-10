@@ -1,0 +1,27 @@
+body {
+    background-image: linear-gradient(178.6deg, #010002 16.4%, #8a1d7b 56.1%);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.informacion {
+    color: white;
+}
+
+.borde1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    margin: 15px;
+    height: 350px;
+    text-align: center;
+    border: 1px solid red;
+}

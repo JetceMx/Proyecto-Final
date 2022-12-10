@@ -25,19 +25,31 @@
     margin-right: 10px;
 }
 
-.nombre-empresa {
+.encabezado .nombre-empresa {
     text-decoration: none;
     color: white;
+    font-size: 30px;
 }
 
 
 .buscar {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .btn-buscar {
     cursor: pointer;
+}
+
+.buscar #input_bus {
+    background-color: white;
+    width: 200px;
+    height: 28px;
+    font-size: 15px;
+    border: 1px solid silver;
+    border-radius: 5px;
 }
 
 .fa-solid {
@@ -49,14 +61,6 @@
     color: #c925b3;
 }
 
-#input_bus {
-    background-color: white;
-    width: 200px;
-    height: 28px;
-    font-size: 15px;
-    border: 1px solid silver;
-    border-radius: 5px;
-}
 
 .encabezado nav a {
     padding-right: 10px;
@@ -66,13 +70,31 @@
     color: #c925b3;
 }
 
-@media (max-width:700px) {
-    .encabezado header {
+@media (max-width:800px) {
+    .encabezado {
         flex-direction: column;
     }
 
+    .encabezado .buscar {
+        margin: 10px;
+    }
+
     .encabezado nav {
-        padding: 10px 0px;
+        margin: 10px;
+    }
+}
+
+@media (max-width:1200px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    .encabezado .buscar {
+        margin: 10px;
+    }
+
+    .encabezado nav {
+        margin: 10px;
     }
 }
 
