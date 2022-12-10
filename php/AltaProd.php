@@ -132,68 +132,66 @@ if ($conexion->connect_errno) {
     <body>
 
         <!-- FORMULARIO PARA DATOS ------------------------------------------------------------------------------------------------------>
-            <h1 class="titulo"> - REGISTRO DE PRODUCTOS - </h1>
-            <div class="inset">
-                <div class="container">
+        <div class="container">
 
-                    <div class="row">
+            <div class="row">
 
-                        <div class="col-4">
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+                <div class="col-4">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data" class="animate__animated animate__backInDown">
+                        <div class="inset">
+                            <h1 class="titulo"> - REGISTRO DE PRODUCTOS - </h1>
 
-                                <div class="form-group">
-                                    <label for="ID"> ID del Producto: </label>
-                                    <input type="number" name="ID" class="form-control" id="ID" placeholder="" maxlength="5">
-                                </div>
+                            <div class="form-group">
+                                <label for="ID"> ID del Producto: </label>
+                                <input type="number" name="ID" class="form-control" id="ID" placeholder="" maxlength="5">
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="Nombre"> Nombre del Producto: </label>
-                                    <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="">
-                                </div>
+                            <div class="form-group">
+                                <label for="Nombre"> Nombre del Producto: </label>
+                                <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="">
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="Cat"> Categoria: </label>
-                                    <input type="text" id="Cat" name="Cat" class="form-control" placeholder=" ">
-                                </div>
+                            <div class="form-group">
+                                <label for="Cat"> Categoria: </label>
+                                <input type="text" id="Cat" name="Cat" class="form-control" placeholder=" ">
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="Desc"> Descripcion: </label>
-                                    <input name="Desc" type="text" class="form-control" id="Desc" placeholder="">
-                                </div>
+                            <div class="form-group">
+                                <label for="Desc"> Descripcion: </label>
+                                <input name="Desc" type="text" class="form-control" id="Desc" placeholder="">
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="Exist"> Existencia: </label>
-                                    <input name="Exist" type="number" class="form-control" id="Exist" placeholder="">
-                                </div>
+                            <div class="form-group">
+                                <label for="Exist"> Existencia: </label>
+                                <input name="Exist" type="number" class="form-control" id="Exist" placeholder="">
+                            </div>
 
-                                <div class="form-group">
-                                    <label for="Precio"> Precio: </label>
-                                    <input name="Precio" type="number" class="form-control" id="Precio" placeholder="">
-                                </div>
-                                
-                                <div class="form-group">
-                                        <label for="IMG"> Imagen: </label>
-                                        <input type="file" name="IMG" class="form-control">
-                                </div>
+                            <div class="form-group">
+                                <label for="Precio"> Precio: </label>
+                                <input name="Precio" type="number" class="form-control" id="Precio" placeholder="">
+                            </div>
+                        
+                            <div class="form-group">
+                                <label for="IMG"> Imagen: </label>
+                                <input type="file" name="IMG" class="form-control">
+                            </div>
 
-                                <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
+                            <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
 
-                                <br><br>
+                            <br><br>
+                        <!-- BOTONES DE ACCESO ---------------------------------------------------------------------------------------------------------->
 
-                                <!-- BOTONES DE ACCESO ---------------------------------------------------------------------------------------------------------->
+                            <button class="bttn"><a class="bttn" href="BajaProd.php">Eliminar Datos</a></button>
+                            <button class="bttn"><a class="bttn" href="ModiProd.php">Modificar Datos</a></button>
+                        </div>
 
-                                <button class="bttn"><a class="bttn" href="BajaProd.php">Eliminar Datos</a></button>
-                                <button class="bttn"><a class="bttn" href="ModiProd.php">Modificar Datos</a></button>
+                    </form>
 
-                            </form>
+                </div> <!-- fin col -->
 
-                        </div> <!-- fin col -->
+            </div> <!-- fin row -->
 
-                    </div> <!-- fin row -->
-
-                </div> <!-- fin container -->
-
-            </div>
+            </div> <!-- fin container -->
 
         <?php
         include "footer.php";
@@ -201,4 +199,4 @@ if ($conexion->connect_errno) {
 
     </body>
 
-    </html>
+</html>
