@@ -2,37 +2,41 @@ body {
     background-image: linear-gradient(178.6deg, #010002 16.4%, #8a1d7b 56.1%);
 }
 
-#ad_titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto;
-    background-color: white;
-    color: black;
-    width: 80%;
-    height: 50px;
-    border-radius: 15px;
-}
-
-.ad_contenido {
+.opcionesAdmin {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0px auto;
-    background-image: linear-gradient(109.6deg, rgb(31, 29, 30) 11.2%, rgb(92, 40, 89) 91.1%);
-    color: black;
-    width: 80%;
-    height: 200px;
+    background-color: #01000263;
     border-radius: 15px;
-    border: 1px solid rgb(206, 204, 200);
+    width: 75%;
+    height: 500px;
 }
 
-.ad_contenido h2 {
+.opcionesAdmin h1,
+h2 {
     color: white;
 }
 
-.ad_contenido p {
+.opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(109.6deg, rgb(31, 29, 30) 11.2%, rgb(92, 40, 89) 91.1%);
     width: 80%;
-    text-align: center;
+    height: 60px;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.opcionesAdmin a {
+    font-size: 25px;
     color: white;
+    text-decoration: none;
+}
+
+.opcionesAdmin a:hover {
+    color: #c925b3;
+    cursor: pointer;
 }

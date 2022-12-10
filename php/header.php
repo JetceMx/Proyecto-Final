@@ -14,21 +14,21 @@
 <body>
     <header class="encabezado">
         <a href="Inicio.php" class="logo">
-            <img src="../images/logo (1).gif" alt="Logo Sabinito Games">
+            <img id="img_logo" src="../images/logo (1).gif" alt="Logo Sabinito Games">
             <h2 class="nombre-empresa">Sabinito Games</h2>
         </a>
         <div class="buscar">
-            <input type="text" placeholder=" Buscar" required>
+            <input id="input_bus" type="text" placeholder=" Buscar  " required>
             <div class="btn-buscar">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
         <nav>
-            <a href="Inicio.php" class="nav-link">Inicio</a>
-            <a href="#" class="nav-link">Tienda</a>
-            <a href="AcercaDe.php" class="nav-link">Acerca De</a>
-            <a href="Contactanos.php" class="nav-link">Contáctanos</a>
-            <a href="Ayuda.php" class="nav-link">Ayuda</a>
+            <a class="a_general" href="Inicio.php" class="nav-link">Inicio</a>
+            <a class="a_general" href="#" class="nav-link">Tienda</a>
+            <a class="a_general" href="AcercaDe.php" class="nav-link">Acerca De</a>
+            <a class="a_general" href="Contactanos.php" class="nav-link">Contáctanos</a>
+            <a class="a_general" href="Ayuda.php" class="nav-link">Ayuda</a>
             <?php
             date_default_timezone_set('America/Mexico_City');
             $today = getdate();

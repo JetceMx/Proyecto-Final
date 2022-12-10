@@ -2,9 +2,9 @@
 
 session_start();
 
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
-$password = 'Sandia2016.!';
+$password = '';
 $bd = 'productos';
 
 // VARIABLES DE SESIONES...
@@ -83,13 +83,13 @@ if (isset($_POST['MOD'])) {
             <div class="izquierdaAlta">
 
                 <?php
-                //continuamos con la consulta de datos a la tabla usuarios
-                //vemos datos en un tabla de html
-                $sql = 'select * from productos'; //hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
-                $resultado = $conexion->query($sql); //aplicamos sentencia
-                
-                if ($resultado->num_rows) { //si la consulta genera registros
-                ?>
+            //continuamos con la consulta de datos a la tabla usuarios
+            //vemos datos en un tabla de html
+            $sql = 'select * from productos'; //hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
+            $resultado = $conexion->query($sql); //aplicamos sentencia
+            
+            if ($resultado->num_rows) { //si la consulta genera registros
+            ?>
 
 
                 <div class="izqAlta">
@@ -103,28 +103,28 @@ if (isset($_POST['MOD'])) {
 
                             <?php
 
-                    $salida = '<table>';
+                $salida = '<table>';
 
-                    while ($fila = $resultado->fetch_assoc()) { //recorremos los registros obtenidos de la tabla
-                
-                        echo '<option value="' . $fila["IDProducto"] . '">' . $fila["Nombre"] . '</option>';
-                        //proceso de concatenacion de datos
-                
-                        $salida .= '<tr>';
-                        $salida .= '<td>' . $fila['IDProducto'] . '</td>';
-                        $salida .= '<td>' . $fila['Nombre'] . '</td>';
-                        $salida .= '<td>' . $fila['Categoria'] . '</td>';
-                        $salida .= '<td>' . $fila['Descripcion'] . '</td>';
-                        $salida .= '<td>' . $fila['Existencia'] . '</td>';
-                        $salida .= '<td>' . $fila['Precio'] . '</td>';
-                        $salida .= '<td>' . $fila['Imagen'] . '</td>';
-                        $salida .= '</tr>';
+                while ($fila = $resultado->fetch_assoc()) { //recorremos los registros obtenidos de la tabla
+            
+                    echo '<option value="' . $fila["IDProducto"] . '">' . $fila["Nombre"] . '</option>';
+                    //proceso de concatenacion de datos
+            
+                    $salida .= '<tr>';
+                    $salida .= '<td>' . $fila['IDProducto'] . '</td>';
+                    $salida .= '<td>' . $fila['Nombre'] . '</td>';
+                    $salida .= '<td>' . $fila['Categoria'] . '</td>';
+                    $salida .= '<td>' . $fila['Descripcion'] . '</td>';
+                    $salida .= '<td>' . $fila['Existencia'] . '</td>';
+                    $salida .= '<td>' . $fila['Precio'] . '</td>';
+                    $salida .= '<td>' . $fila['Imagen'] . '</td>';
+                    $salida .= '</tr>';
 
-                    } //fin while   
-                
-                    $salida .= '</table>';
+                } //fin while   
+            
+                $salida .= '</table>';
 
-                            ?>
+                ?>
                         </select>
 
                         <br><br>
@@ -142,11 +142,11 @@ if (isset($_POST['MOD'])) {
                 </div>
                 <?php
 
-                } else {
-                    echo "no hay datos";
-                }
+            } else {
+                echo "no hay datos";
+            }
 
-                ?>
+            ?>
             </div>
 
             <div class="izquierdaBaja">

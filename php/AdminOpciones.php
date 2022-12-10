@@ -9,12 +9,29 @@ include "header.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Style-Global.css">
+    <link rel="stylesheet" href="../css/Style-AdminOpc.css">
     <title>Opciones de productos</title>
 </head>
 
 <body>
-
-
+    <br>
+    <div class="opcionesAdmin">
+        <h1>Bienvenido !</h1>
+        <div class="opcion">
+            <a href="#">Alta de productos</a>
+        </div>
+        <div class="opcion">
+            <a href="#">Modificar productos</a>
+        </div>
+        <div class="opcion">
+            <a href="#">Borrar productos</a>
+        </div>
+        <div class="opcion">
+            <a href="#">Ver gráficas</a>
+        </div>
+    </div>
+    <br>
     <?php
     include "footer.php";
     ?>

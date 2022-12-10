@@ -2,9 +2,9 @@
 
 // VARIABLES DE CONEXION...
 
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
-$password = 'Sandia2016.!';
+$password = '';
 $bd = 'productos';
 
 $conexion = new mysqli($servidor, $cuenta, $password, $bd);
@@ -32,38 +32,38 @@ if ($conexion->connect_errno) {
     if ($resultado->num_rows) {
 
 ?>
->
+<div>
 
-<fm action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-    <legend> - ELIMINAR CUENTAS - </legend>
+        <legend> - ELIMINAR CUENTAS - </legend>
 
-    <br>
+        <br>
 
-    <select class="browser-default custom-select" name="eliminar">
+        <select class="browser-default custom-select" name="eliminar">
 
-        <?php
+            <?php
 
         while ($fila = $resultado->fetch_assoc()) {
 
             echo '<option value="' . $fila["IDProducto"] . '">' . $fila["Nombre"] . '</option>';
 
         }
-        ?>
+            ?>
 
-    </select>
+        </select>
 
 
-    <br><br>
+        <br><br>
 
-    <button type="submit" value="submit" name="submit"> Eliminar Productos </button>
+        <button type="submit" value="submit" name="submit"> Eliminar Productos </button>
 
-    <br><br>
+        <br><br>
 
-    <button><a href="ModiProd.php">Modificar Datos</a></button>
-    <button><a href="AltaProd.php">Ingresar Datos</a></button>
+        <button><a href="ModiProd.php">Modificar Datos</a></button>
+        <button><a href="AltaProd.php">Ingresar Datos</a></button>
 
-</fm>
+    </form>
 </div>
 
 <?php

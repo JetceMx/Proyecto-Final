@@ -8,12 +8,14 @@
     padding: 10px;
 }
 
-.encabezado a {
+.a_general {
     text-decoration: none;
     color: white;
 }
 
 .logo {
+    text-decoration: none;
+    color: white;
     display: flex;
     align-items: center;
 }
@@ -22,6 +24,12 @@
     height: 75px;
     margin-right: 10px;
 }
+
+.nombre-empresa {
+    text-decoration: none;
+    color: white;
+}
+
 
 .buscar {
     display: flex;
@@ -41,7 +49,8 @@
     color: #c925b3;
 }
 
-.buscar input {
+#input_bus {
+    background-color: white;
     width: 200px;
     height: 28px;
     font-size: 15px;

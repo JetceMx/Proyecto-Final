@@ -1,8 +1,8 @@
 <?php
 
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
-$password = 'Sandia2016.!';
+$password = '';
 $bd = 'productos';
 
 // CONEXION A BASE DE DATOS...
@@ -27,7 +27,7 @@ if ($conexion->connect_errno) {
 
         // SENTENCIA PARA INSERTAR DATOS POR CADENA -MYSQL- ...
 
-        $sql = "INSERT INTO productos (IDProducto, Nombre, Categoria, Descripcion, Existencia, Precio, Imagen) VALUES('$id','$nom','$cat','$desc','$exist','$precio','images/Productos/$img')";
+        $sql = "INSERT INTO productos (IDProducto, Nombre, Categoria, Descripcion, Existencia, Precio, Imagen)               VALUES('$id','$nom','$cat','$desc','$exist','$precio','$img')";
 
         // SE APLICA LA SENTENCIA EN LA CONEXION ACTUAL...
 
