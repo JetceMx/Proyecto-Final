@@ -1,6 +1,6 @@
 <?php
 
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';
@@ -24,10 +24,11 @@ if ($conexion->connect_errno) {
         $exist = $_POST['Exist'];
         $precio = $_POST['Precio'];
         $img = addslashes(file_get_contents($_FILES['IMG']['tmp_name']));
+        $codigo = $_POST['Cod'];
 
         // SENTENCIA PARA INSERTAR DATOS POR CADENA -MYSQL- ...
 
-        $sql = "INSERT INTO productos (IDProducto, Nombre, Categoria, Descripcion, Existencia, Precio, Imagen)               VALUES('$id','$nom','$cat','$desc','$exist','$precio','$img')";
+        $sql = "INSERT INTO productos (IDProducto, Nombre, Categoria, Descripcion, Existencia, Precio, Imagen, CodigoProducto)               VALUES('$id','$nom','$cat','$desc','$exist','$precio','$img','$codigo')";
 
         // SE APLICA LA SENTENCIA EN LA CONEXION ACTUAL...
 
@@ -134,6 +135,11 @@ include "header.php";
                         <div class="form-group">
                             <label for="IMG"> Imagen: </label>
                             <input type="file" name="IMG" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="Cod"> Codigo del Producto: </label>
+                            <input name="Cod" type="text" class="form-control" id="Cod" placeholder="">
                         </div>
 
                         <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>

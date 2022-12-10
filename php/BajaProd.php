@@ -3,7 +3,7 @@
 include "header.php";
 // VARIABLES DE CONEXION...
 
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';

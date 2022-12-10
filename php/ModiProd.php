@@ -10,7 +10,7 @@ include "header.php";
 
 
 
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';
@@ -24,6 +24,7 @@ $_SESSION['Desc'] = '';
 $_SESSION['Exist'] = '';
 $_SESSION['Precio'] = '';
 $_SESSION['Img'] = '';
+$_SESSION['Cod'] = '';
 
 $conexion = new mysqli($servidor, $cuenta, $password, $bd);
 
@@ -49,6 +50,7 @@ if (isset($_POST["submit"])) {
         $_SESSION['Exist'] = $fila["Existencia"];
         $_SESSION['Precio'] = $fila["Precio"];
         $_SESSION['Img'] = $fila["Imagen"];
+        $_SESSION['Cod'] = $fila["CodigoProducto"];
     }
 }
 
@@ -61,10 +63,11 @@ if (isset($_POST['MOD'])) {
     $cinco = $_POST["Exist2"];
     $seis = $_POST["Precio2"];
     $siete = addslashes(file_get_contents($_FILES['IMG2']['tmp_name']));
+    $ocho = $_POST["Cod2"];
 
     $Modificarl = $_SESSION["Modificar2"];
 
-    $ne = "update productos set IDProducto='$uno', Nombre='$dos', Categoria='$tres', Descripcion='$cuatro', Existencia='$cinco', Precio='$seis', Imagen='$siete' WHERE IDProducto='$Modificarl'";
+    $ne = "update productos set IDProducto='$uno', Nombre='$dos', Categoria='$tres', Descripcion='$cuatro', Existencia='$cinco', Precio='$seis', Imagen='$siete', CodigoProducto='$ocho' WHERE IDProducto='$Modificarl'";
     $fin = $conexion->query($ne);
 }
 
@@ -130,6 +133,7 @@ if (isset($_POST['MOD'])) {
                                                     <td> <?php echo $fila['Existencia']; ?></td>
                                                     <td> <?php echo $fila['Precio']; ?></td>
                                                     <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
+                                                    <td> <?php echo $fila['CodigoProducto']; ?></td>
 
                                                     <?php
 
@@ -210,6 +214,11 @@ if (isset($_POST['MOD'])) {
                                         <label for="Imagen"> Imagen </label>
                                         <img src="data:image/jpg;base64,<?php echo base64_encode($_SESSION['Img']); ?>" height="75" width="75">
                                         <input type="file" name="IMG2" id="IMG2">
+                                    </li>
+                                    
+                                    <li class="form-row">
+                                        <label for="Codigo"> Codigo del Producto </label>
+                                        <input type="text" id="Cod2" name="Cod2" value="<?php echo $_SESSION['Cod']; ?>">
                                     </li>
 
                                     <li class="form-row">

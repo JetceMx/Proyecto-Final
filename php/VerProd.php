@@ -17,7 +17,7 @@
 
     //VARIABLES...
      
-    $servidor='localhost';
+    $servidor='localhost:33065';
     $cuenta='root';
     $password='';
     $bd='productos';
@@ -63,6 +63,7 @@
                     echo '<th> EXISTENCIA      </th>';
                     echo '<th> PRECIO          </th>';
                     echo '<th> IMAGEN          </th>';
+                    echo '<th> CODIGO          </th>';
             
             echo '</tr>';
             
@@ -82,9 +83,7 @@
                         <td> <?php echo $fila['Existencia']; ?></td>
                         <td> <?php echo $fila['Precio']; ?></td>
                         <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
-
-                        
- 
+                        <td> <?php echo $fila['CodigoProducto']; ?></td>
 
                         <?php
                 
