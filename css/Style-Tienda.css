@@ -2,16 +2,29 @@ body {
     background-image: linear-gradient(178.6deg, #010002 16.4%, #8a1d7b 56.1%);
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.categorias {
+    color: white;
+    border: 5px solid red;
+}
+
 .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
-    border: 1px solid red;
 }
 
 .informacion {
+    text-align: center;
+    height: 200px;
+    border: 1px solid pink;
     color: white;
+    margin: 6px;
 }
 
 .borde1 {
@@ -20,8 +33,20 @@ body {
     align-items: center;
     justify-content: center;
     width: 290px;
+    height: 450px;
+    padding: 5px;
     margin: 15px;
-    height: 350px;
     text-align: center;
-    border: 1px solid red;
+    border: 1px solid salmon;
+}
+
+.borde2 img {
+    border: 1px solid green;
+    height: 150px;
+}
+
+.carro {
+    border: 1px solid silver;
+    background-color: #010002;
+    color: white;
 }
