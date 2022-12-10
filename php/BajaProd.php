@@ -2,9 +2,9 @@
 
 // VARIABLES DE CONEXION...
 
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
-$password = 'Sandia2016.!';
+$password = '';
 $bd = 'productos';
 
 $conexion = new mysqli($servidor, $cuenta, $password, $bd);

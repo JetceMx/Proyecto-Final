@@ -1,8 +1,8 @@
 <?php
 
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
-$password = 'Sandia2016.!';
+$password = '';
 $bd = 'productos';
 
 // CONEXION A BASE DE DATOS...
@@ -132,7 +132,6 @@ if ($conexion->connect_errno) {
     <body>
 
         <!-- FORMULARIO PARA DATOS ------------------------------------------------------------------------------------------------------>
-        <form class="animate__animated animate__backInDown" method="POST">
             <h1 class="titulo"> - REGISTRO DE PRODUCTOS - </h1>
             <div class="inset">
                 <div class="container">
@@ -140,13 +139,11 @@ if ($conexion->connect_errno) {
                     <div class="row">
 
                         <div class="col-4">
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post'
-                                enctype="multipart/form-data">
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
 
                                 <div class="form-group">
                                     <label for="ID"> ID del Producto: </label>
-                                    <input type="number" name="ID" class="form-control" id="ID" placeholder=""
-                                        maxlength="5">
+                                    <input type="number" name="ID" class="form-control" id="ID" placeholder="" maxlength="5">
                                 </div>
 
                                 <div class="form-group">
@@ -173,14 +170,9 @@ if ($conexion->connect_errno) {
                                     <label for="Precio"> Precio: </label>
                                     <input name="Precio" type="number" class="form-control" id="Precio" placeholder="">
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="Desc"> Imagen(URL): </label>
-                                    <input name="Img" type="text" class="form-control" id="Img" placeholder="">
-                                </div>
                                 
                                 <div class="form-group">
-                                        <label for="Img"> Imagen: </label>
+                                        <label for="IMG"> Imagen: </label>
                                         <input type="file" name="IMG" class="form-control">
                                 </div>
 
@@ -202,8 +194,6 @@ if ($conexion->connect_errno) {
                 </div> <!-- fin container -->
 
             </div>
-
-        </form>
 
         <?php
         include "footer.php";
