@@ -20,9 +20,11 @@ include "header.php";
 
     <div class="container">
 
-        <div class="card">
+        <div id="card" class="animate__animated animate__bounceInDown">
 
             <h1>Pago con Tarjetas Bancarias</h1>
+            
+            <pre>Si no cuentas con tarjeta Bancaria , <u><a href="Pago-Oxxo.php">Paga en Oxxo</a></u></pre>
 
             <div class="Tarjetas">
 
@@ -32,7 +34,7 @@ include "header.php";
                     <label for="pp"> </label>
                 </div>
                 <div class="right">
-                    <img src="../images/Visa.png" alt="Visa" height="150" width="150" />
+                    <img src="../images/Visa.png" alt="Visa" height="100" width="100" />
                 </div>
 
                 <div class="left">
@@ -42,7 +44,7 @@ include "header.php";
                 </div>
 
                 <div class="right">
-                    <img src="../images/MasterCard.png" alt="mastercard" height="150" width="150" />
+                    <img src="../images/MasterCard.png" alt="mastercard" height="100" width="100" />
                 </div>
 
             </div>
@@ -110,9 +112,19 @@ include "header.php";
                 </div>
 
             </div>
+            
+            <div class="Cupon">
+
+                <div class="info">
+                    <label for="Cup">Canjea tu Cupon</label>
+                    <input id="Cup" type="text" maxlength="15"
+                        placeholder="!!Canjeable!!" />
+                </div>
+
+            </div>
 
             <div class="button">
-                <button type="submit" id="Sub">Pagar</button>
+                <button type="submit" id="Sub">PAGAR</button>
             </div>
 
         </div>
