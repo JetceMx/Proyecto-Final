@@ -48,48 +48,7 @@ if ($conexion->connect_errno) {
 
         if ($resultado->num_rows) {
 
-            echo '<div style="margin-left: 20px;">';
-            echo '<table class="table table-hover" style="width:50%;">';
-
-            echo '<tr style="text-align: center;">';
-
-            echo '<th> ID PRODUCTO </th>';
-            echo '<th> NOMBRE </th>';
-            echo '<th> CATEGORIA </th>';
-            echo '<th> DESCRIPCION </th>';
-            echo '<th> EXISTENCIA </th>';
-            echo '<th> PRECIO </th>';
-            echo '<th> IMAGEN </th>';
-
-            echo '</tr>';
-
             while ($fila = $resultado->fetch_assoc()) { // SE RECORREN LOS DATOS DE LA TABLA...
-
-?>
-
-<tr style="text-align: center;">
-
-    <td>
-        <?php echo $fila['IDProducto']; ?>
-    </td>
-    <td>
-        <?php echo $fila['Nombre']; ?>
-    </td>
-    <td>
-        <?php echo $fila['Categoria']; ?>
-    </td>
-    <td>
-        <?php echo $fila['Descripcion']; ?>
-    </td>
-    <td>
-        <?php echo $fila['Existencia']; ?>
-    </td>
-    <td>
-        <?php echo $fila['Precio']; ?>
-    </td>
-    <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
-
-    <?php
 
                 echo '</tr>';
             }
