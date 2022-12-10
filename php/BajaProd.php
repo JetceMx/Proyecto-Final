@@ -36,10 +36,11 @@ if ($conexion->connect_errno) {
 
 
 
-    <form class="animate__animated animate__backInDown" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+<form class="animate__animated animate__backInDown" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
+    method="post">
 
-        <div class="inset">
-            
+    <div class="inset">
+
         <h1 class="titulo"> - ELIMINAR CUENTAS - </h1>
 
         <br>
@@ -66,8 +67,8 @@ if ($conexion->connect_errno) {
 
         <button><a href="ModiProd.php">Modificar Datos</a></button>
         <button><a href="AltaProd.php">Ingresar Datos</a></button>
-        </div>
-    </form>
+    </div>
+</form>
 
 
 <?php
@@ -124,7 +125,7 @@ if ($conexion->connect_errno) {
     }
 
     echo '<br><br>';
-    
+
     include "footer.php";
 
     ?>
