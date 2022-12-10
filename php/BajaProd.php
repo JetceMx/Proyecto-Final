@@ -1,5 +1,6 @@
 <?php
 
+include "header.php";
 // VARIABLES DE CONEXION...
 
 $servidor = 'localhost';
@@ -91,17 +92,6 @@ if ($conexion->connect_errno) {
     <link rel="stylesheet" href="../css/Style-BajaProd.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <style>
-        div {
-
-            width: 20%;
-        }
-
-        body {
-            margin: 50px;
-        }
-    </style>
 </head>
 
 <body>
@@ -134,6 +124,8 @@ if ($conexion->connect_errno) {
     }
 
     echo '<br><br>';
+    
+    include "footer.php";
 
     ?>
 </body>

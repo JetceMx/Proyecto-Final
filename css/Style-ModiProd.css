@@ -10,9 +10,9 @@ body {
 
 }
 
-form {
+.prin {
  	background:#111; 
-  width:500px;
+  width:800px;
   margin:30px auto;
   border-radius:0.4em;
   border:1px solid #191919;
@@ -41,7 +41,7 @@ form:before {
     border-radius:100%;
     left:10%;
     top:-2px;
-    box-shadow: 0 0 6px 4px rgba(201,37,179,1);
+
 }
 
 .inset {

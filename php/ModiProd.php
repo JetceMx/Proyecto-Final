@@ -1,8 +1,16 @@
+
 <?php
 
-session_start();
+//session_start();
 
-$servidor = 'localhost:33065';
+
+
+
+include "header.php";
+
+
+
+$servidor = 'localhost';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';
@@ -62,6 +70,7 @@ if (isset($_POST['MOD'])) {
 
 ?>
 
+
 <html lang="en">
 
 <head>
@@ -72,142 +81,151 @@ if (isset($_POST['MOD'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="Estilos2.css">
+    <link rel="stylesheet" href="../css/Style-ModiProd.css">
 
 </head>
 
 <body>
 
-    <div class="contenedor1">
-        <div class="contenedor2">
-            <div class="izquierdaAlta">
-
-                <?php
-            //continuamos con la consulta de datos a la tabla usuarios
-            //vemos datos en un tabla de html
-            $sql = 'select * from productos'; //hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
-            $resultado = $conexion->query($sql); //aplicamos sentencia
-            
-            if ($resultado->num_rows) { //si la consulta genera registros
-            ?>
-
-
-                <div class="izqAlta">
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post'>
-
-                        <legend> Modificar Productos </legend>
-
-                        <br>
-
-                        <select class="custom-select" name='Modificar'>
-
+            <div class="contenedor1">
+                <div class="contenedor2"> 
+                    <div class="izquierdaAlta">
+                        <div>
                             <?php
-
-                $salida = '<table>';
-
-                while ($fila = $resultado->fetch_assoc()) { //recorremos los registros obtenidos de la tabla
+                            //continuamos con la consulta de datos a la tabla usuarios
+                            //vemos datos en un tabla de html
+                            $sql = 'select * from productos'; //hacemos cadena con la sentencia mysql que consulta todo el contenido de la tabla
+                            $resultado = $conexion->query($sql); //aplicamos sentencia
             
-                    echo '<option value="' . $fila["IDProducto"] . '">' . $fila["Nombre"] . '</option>';
-                    //proceso de concatenacion de datos
+                            if ($resultado->num_rows) { //si la consulta genera registros
+                                ?>
+
+                                <div class="izqAlta">  
+                                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post' class="prin">
+                                        <div class="inset">
+
+                                            <h1 class="titulo"> Modificar Productos </h1>
+
+                                            <br>
+
+                                            <select class="custom-select" name='Modificar'>
+
+                                                <?php
+
+                                                $salida = '<table>';
+
+                                                while ($fila = $resultado->fetch_assoc()) { //recorremos los registros obtenidos de la tabla
             
-                    ?>
-
-                        <tr style="text-align: center;">
-
-                        <td> <?php echo $fila['IDProducto']; ?></td>
-                        <td> <?php echo $fila['Nombre']; ?></td>
-                        <td> <?php echo $fila['Categoria']; ?></td>
-                        <td> <?php echo $fila['Descripcion']; ?></td>
-                        <td> <?php echo $fila['Existencia']; ?></td>
-                        <td> <?php echo $fila['Precio']; ?></td>
-                        <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
-
-                        <?php
-
-                        echo '</tr>';
-
-                } //fin while   
+                                                    echo '<option value="' . $fila["IDProducto"] . '">' . $fila["Nombre"] . '</option>';
+                                                    //proceso de concatenacion de datos
             
-                $salida .= '</table>';
+                                                    ?>
 
-                ?>
-                        </select>
+                                                    <tr style="text-align: center;">
 
-                        <br><br>
+                                                    <td> <?php echo $fila['IDProducto']; ?></td>
+                                                    <td> <?php echo $fila['Nombre']; ?></td>
+                                                    <td> <?php echo $fila['Categoria']; ?></td>
+                                                    <td> <?php echo $fila['Descripcion']; ?></td>
+                                                    <td> <?php echo $fila['Existencia']; ?></td>
+                                                    <td> <?php echo $fila['Precio']; ?></td>
+                                                    <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
 
-                        <button class="btn btn-success" type="submit" value="submit" name="submit"> Seleccionar
-                        </button>
+                                                    <?php
 
-                        <br><br>
+                                                    echo '</tr>';
 
-                        <button><a href="BajaProd.php">Eliminar Datos</a></button>
-                        <button><a href="AltaProd.php">Ingresar Datos</a></button>
+                                                } //fin while   
+            
+                                                $salida .= '</table>';
 
-                    </form>
+                                                ?>
+                                            </select>
+
+                                            <br><br>
+
+                                            <button class="btn btn-success" type="submit" value="submit" name="submit"> Seleccionar</button>
+
+                                            <br><br>
+
+                                            <button><a href="BajaProd.php">Eliminar Datos</a></button>
+                                            <button><a href="AltaProd.php">Ingresar Datos</a></button>
+                                        </div>    
+
+                                    </form>
+
+                                </div>
+
+                                <?php
+
+                            } else {
+                                echo "no hay datos";
+                            }
+
+                            ?>
+                        </div>
+
+                        <div class="izquierdaBaja">
+                            <?php echo $salida ?>
+                        </div>
+
+                    </div>
+                    <div class="derecha">
+
+                        <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post' enctype="multipart/form-data" class="prin">
+                            <div class="inset">
+                                <ul class="wrapper">
+
+                                    <li class="form-row">
+                                        <label for="ID"> ID del Producto </label>
+                                        <input type="number" name="IDProducto2" id="ID" value="<?php echo $_SESSION["IDProducto"]; ?>">
+                                    </li>
+
+                                    <li class="form-row">
+                                        <label for="Nombre"> Nombre </label>
+                                        <input type="text" id="Nombre" name="Nombre2" value="<?php echo $_SESSION["Nombre"]; ?>">
+                                    </li>
+
+                                    <li class="form-row">
+                                        <label for="Categoria"> Categoria </label>
+                                        <input type="text" id="Categoria" name="Cat2" value="<?php echo $_SESSION["Cat"]; ?>">
+                                    </li>
+
+                                    <li class="form-row">
+                                        <label for="Descripcion"> Descripcion </label>
+                                        <input type="text" id="contra" name="Desc2" value="<?php echo $_SESSION['Desc']; ?>">
+                                    </li>
+
+                                    <li class="form-row">
+                                        <label for="Existencia"> Existencia </label>
+                                        <input type="text" id="contra" name="Exist2" value="<?php echo $_SESSION['Exist']; ?>">
+                                    </li>
+
+                                    <li class="form-row">
+                                        <label for="Precio"> Precio </label>
+                                        <input type="text" id="contra" name="Precio2" value="<?php echo $_SESSION['Precio']; ?>">
+                                    </li>
+
+                                    <li class="form-row">
+                                        <label for="Imagen"> Imagen </label>
+                                        <img src="data:image/jpg;base64,<?php echo base64_encode($_SESSION['Img']); ?>" height="75" width="75">
+                                        <input type="file" name="IMG2" id="IMG2">
+                                    </li>
+
+                                    <li class="form-row">
+                                        <button type="submit" name="MOD">Modificar</button>
+                                    </li>
+                                </ul>
+                            </div>    
+                        </form>
+                    </div>
                 </div>
-                <?php
-
-            } else {
-                echo "no hay datos";
-            }
-
-            ?>
             </div>
+    
+    <?php
+    include "footer.php";
+    ?>        
 
-            <div class="izquierdaBaja">
-                <?php echo $salida ?>
-            </div>
-
-        </div>
-        <div class="derecha">
-
-            <form class="estiloformulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post' enctype="multipart/form-data">
-
-                <ul class="wrapper">
-
-                    <li class="form-row">
-                        <label for="ID"> ID del Producto </label>
-                        <input type="number" name="IDProducto2" id="ID" value="<?php echo $_SESSION["IDProducto"]; ?>">
-                    </li>
-
-                    <li class="form-row">
-                        <label for="Nombre"> Nombre </label>
-                        <input type="text" id="Nombre" name="Nombre2" value="<?php echo $_SESSION["Nombre"]; ?>">
-                    </li>
-
-                    <li class="form-row">
-                        <label for="Categoria"> Categoria </label>
-                        <input type="text" id="Categoria" name="Cat2" value="<?php echo $_SESSION["Cat"]; ?>">
-                    </li>
-
-                    <li class="form-row">
-                        <label for="Descripcion"> Descripcion </label>
-                        <input type="text" id="contra" name="Desc2" value="<?php echo $_SESSION['Desc']; ?>">
-                    </li>
-
-                    <li class="form-row">
-                        <label for="Existencia"> Existencia </label>
-                        <input type="text" id="contra" name="Exist2" value="<?php echo $_SESSION['Exist']; ?>">
-                    </li>
-
-                    <li class="form-row">
-                        <label for="Precio"> Precio </label>
-                        <input type="text" id="contra" name="Precio2" value="<?php echo $_SESSION['Precio']; ?>">
-                    </li>
-
-                    <li class="form-row">
-                        <label for="Imagen"> Imagen </label>
-                        <img src="data:image/jpg;base64,<?php echo base64_encode($_SESSION['Img']); ?>" height="75" width="75">
-                        <input type="file" name="IMG2" id="IMG2">
-                    </li>
-
-                    <li class="form-row">
-                        <button type="submit" name="MOD">Modificar</button>
-                    </li>
-                </ul>
-            </form>
-        </div>
-    </div>
 </body>
 
 </html>
