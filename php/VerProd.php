@@ -1,3 +1,10 @@
+<?php
+    include "header.php";
+?>    
+
+    
+
+
 <br>
    <center><h5 class="card-title">- TIENDA DE PRODUCTOS "GEImers" -</h5></center>
 
@@ -6,12 +13,11 @@
    <br><br>
     
     <?php
-
 // CODIGO PHP PARA OBTENCION DE DATOS EN LA BASE DE DATOS PHPMYADMIN -------------------------------------------------------------
 
     //VARIABLES...
      
-    $servidor='localhost:33065';
+    $servidor='localhost';
     $cuenta='root';
     $password='';
     $bd='productos';
@@ -40,17 +46,17 @@
             echo '
                 </head>
                 
-                <link rel="stylesheet" href="Estilos.css" />
+                <link rel="stylesheet" href="../css/Style-VerProd.css">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
                 </head>';
                 
             echo '<div>';
-            echo '<table class="table table-hover" style="width:100%; font-style: italic">';
+            echo '<table border="2" class="table table-hover" style="padding: auto; width:100%; font-style: italic;">';
               
             echo '<tr>';
             
-                    echo '<th style="text-align: center;"> ID PRODUCTO   </th>';
+                    echo '<th  style="text-align: center;"> ID PRODUCTO   </th>';
                     echo '<th> NOMBRE          </th>';
                     echo '<th> CATEGORIA       </th>';
                     echo '<th> DESCRIPCION     </th>';
@@ -63,10 +69,11 @@
             // IMPRIME LOS VALORES QUE TIENE EL ARREGLO DE FILA...
             
             while( $fila = $resultado -> fetch_assoc()){
+
                 
                 ?>
 
-                        <tr style="text-align: center;">
+                        <tr style="text-align: center; border:'2'">
 
                         <td> <?php echo $fila['IDProducto']; ?></td>
                         <td> <?php echo $fila['Nombre']; ?></td>
@@ -75,6 +82,9 @@
                         <td> <?php echo $fila['Existencia']; ?></td>
                         <td> <?php echo $fila['Precio']; ?></td>
                         <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
+
+                        
+ 
 
                         <?php
                 
@@ -97,5 +107,8 @@
         
         echo '<br><br>';
     }
-
 ?>
+
+  
+
+  

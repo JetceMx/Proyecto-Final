@@ -2,7 +2,7 @@
 
 // VARIABLES DE CONEXION...
 
-$servidor = 'localhost:33065';
+$servidor = 'localhost';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';
@@ -32,11 +32,14 @@ if ($conexion->connect_errno) {
     if ($resultado->num_rows) {
 
 ?>
-<div>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-        <legend> - ELIMINAR CUENTAS - </legend>
+
+    <form class="animate__animated animate__backInDown" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+
+        <div class="inset">
+            
+        <h1 class="titulo"> - ELIMINAR CUENTAS - </h1>
 
         <br>
 
@@ -62,9 +65,9 @@ if ($conexion->connect_errno) {
 
         <button><a href="ModiProd.php">Modificar Datos</a></button>
         <button><a href="AltaProd.php">Ingresar Datos</a></button>
-
+        </div>
     </form>
-</div>
+
 
 <?php
 
@@ -85,6 +88,7 @@ if ($conexion->connect_errno) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> ELIMINAR PRODUCTOS </title>
+    <link rel="stylesheet" href="../css/Style-BajaProd.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
