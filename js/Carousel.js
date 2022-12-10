@@ -11,19 +11,19 @@ class Carousel {
       },
       {
         'id': '2',
-        'src': 'https://i.pinimg.com/736x/b2/6c/d7/b26cd7caf166ff2990c266ec2063bb3f.jpg',
+        'src': '../images/Productos/control4.png',
       },
       {
         'id': '3',
-        'src': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4cAyFBzrPiAVkUt7kjI-2IWL-dUpraviKIQ&usqp=CAU',
+        'src': '../images/Productos/control5.png',
       },
       {
         'id': '4',
-        'src': 'https://pbs.twimg.com/media/FiI2LeQXkAAwX7R?format=jpg&name=medium',
+        'src': '../images/Productos/ps5.png',
       },
       {
         'id': '5',
-        'src': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9yRIf9PslQ7dPQJ9XTjLgYU3ePt_dDVi2lg&usqp=CAU',
+        'src': '../images/Productos/sx.png',
       }
     ];
     this.carouselInView = [1, 2, 3, 4, 5];

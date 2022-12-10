@@ -27,21 +27,28 @@ include_once "header.php";
     <!-- FIN CARRUSEL -->
 
     <div id="recuadro-1">
-        <h1>CADA DIA MÁS GAMER</h2>
+        <div class="r-1_hijo1">
+            <h1>¡CADA DIA MÁS GAMER!</h2>
+                <img src="../images/Santa.png" alt="">
+        </div>
+        <div class="r-1_hijo2">
+            <img src="../images/Cupon2.jpeg" alt="">
+        </div>
     </div>
 
     <div id="recuadro-2">
-        <h1>MÁS VENDIDOS</h1>
-
-        <?php
-        include_once "Carousel.php";
-        ?>
-
+        <div id="titulo">
+            <h1>MÁS VENDIDOS</h1>
+        </div>
+        <div class="centrado">
+            <?php
+            include_once "Carousel.php";
+            ?>
+        </div>
     </div>
 
-    <br><br><br><br><br><br><br><br><br>
-
     <div id="recuadro-3">
+        <h1>CATEGORÍAS</h1>
         <div id="img-categoria" class="categoria">
             <img src="../images/Consolas.webp" alt="">
             <h2>Consolas</h2>
@@ -57,70 +64,20 @@ include_once "header.php";
     </div>
 
     <div id="recuadro-4">
-        <h1>BOLETÍN</h1>
-        <p>Suscríbete al boletín de noticias de productos y ofertas especiales</p>
-        <p>Email *</p>
-        <form action="correo_cupon.php" method="POST">
-            <input type="email" name="cupon" class="campo" placeholder="Introduce tu correo electrónico">
-            <input type="submit" value="Suscribir" class="btn-Sus">
-        </form>
+        <div class="r-4_hijo">
+            <br>
+            <h1>BOLETÍN</h1>
+            <br>
+            <p>Suscríbete al boletín de noticias de productos y ofertas especiales</p>
+            <p>Email *</p>
+            <form action="correo_cupon.php" method="POST">
+                <input type="email" name="cupon" class="campo" placeholder="Introduce tu correo electrónico">
+                <input type="submit" value="Suscribete!" class="btn-Sus">
+            </form>
+        </div>
     </div>
-
-    <div id="recuadro-5">
-        <h2>Recuadro con cambios para que neta se vean</h2>
-    </div>
-
     <!-- Scripts -->
     <script src="../js/Carrusel.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script>
-        var current = 0;
-        var imagenes = new Array();
-
-        $(document).ready(function () {
-            var numImages = 6;
-            if (numImages <= 3) {
-                $('.right-arrow').css('display', 'none');
-                $('.left-arrow').css('display', 'none');
-            }
-
-            $('.left-arrow').on('click', function () {
-                if (current > 0) {
-                    current = current - 1;
-                } else {
-                    current = numImages - 3;
-                }
-
-                $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
-
-                return false;
-            });
-
-            $('.left-arrow').on('hover', function () {
-                $(this).css('opacity', '0.5');
-            }, function () {
-                $(this).css('opacity', '1');
-            });
-
-            $('.right-arrow').on('hover', function () {
-                $(this).css('opacity', '0.5');
-            }, function () {
-                $(this).css('opacity', '1');
-            });
-
-            $('.right-arrow').on('click', function () {
-                if (numImages > current + 3) {
-                    current = current + 1;
-                } else {
-                    current = 0;
-                }
-
-                $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
-
-                return false;
-            });
-        });
-    </script>
     <?php
     include "footer.php";
     ?>

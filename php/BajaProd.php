@@ -131,7 +131,7 @@ if ($conexion->connect_errno) {
 
     echo '<br><br>';
 
-                ?>
+    ?>
 </body>
 
 </html>
