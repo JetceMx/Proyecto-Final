@@ -4,9 +4,9 @@
 $mail = "blog.isc22@gmail.com";
 $asunto = 'Sabinito Games-Contactanos';
 $head= $_POST["nombre"]." ".$_POST["apell"]." ".$_POST["mail"];
-$msj = $_POST["msj"];
+$msj = $_POST["men"];
 
-mail($mail, $asunto, $msj,$head);
+mail($mail, $asunto, $msj);
 ?>
 <script>
    

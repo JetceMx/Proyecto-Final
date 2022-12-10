@@ -1,38 +1,48 @@
 <?php
 include "header.php";
 ?>
+<?php
+$con = new mysqli("localhost","u780407792_Admin1","Qv4WEmXN","u780407792_BD");
+$sql ="select mes, cantvent from ventas21";
+$res=$con->query($sql);
+?>
 <html>
-    <body>
-    <main role="main">
-      <section class="jumbotron text-center">
-        <div class="container">
-          
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
 
-          <div class="row mt-4">
-            <div class="col-md-12">
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Mes', 'Ventas'],
+          <?php
+          while($fila = $res->fetch_assoc()){
+            echo "['".$fila["mes"]."',".$fila["cantvent"]."],";
 
-              <canvas id="miGrafico"></canvas> 
-              
-            </div>
-          </div>               
-          
-        </div>
-      </section>
+          }
+          ?>
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Ventas de Año 2021',
+            subtitle: 'Ventas por mes Enero-Diciembre',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+   
     
-    <script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <!-- Chart JS -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../js/datosg1.js"></script>
-    </body>
+    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+  </body>
 </html>
-
 
 <?php
 include "footer.php";

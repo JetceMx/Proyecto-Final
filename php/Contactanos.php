@@ -49,7 +49,7 @@ Mexico.</pre>
 
             <div class="Formulario">
 
-                <form action="correo_contactanos.php">
+                <form action="correo_contactanos.php" method="POST">
 
                     <table>
 
@@ -78,7 +78,7 @@ Mexico.</pre>
                         </tr>
 
                         <tr>
-                            <td colspan="2"><textarea rows="8" cols="43" name="msj"></textarea></td>
+                            <td colspan="2"><textarea rows="8" cols="43" name="men"></textarea></td>
 
                         <tr>
 
