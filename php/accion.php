@@ -26,7 +26,15 @@
         if(!$code)
         {
             $query = $conn->prepare("INSERT INTO carro (
-                producto_nombre, producto_precio, producto_imagen")
+                producto_nombre, producto_precio, producto_imagen, cant, precio_total, producto_codigo)
+                VALUES (?,?,?,?,?,?)");
+                $query->bind_param("sssiss", $pnombre, $pprecio, $pimagen, $cant, $pprecio, $pcode);
+                $query->execute();
+
+                echo 'PRODUCTO AÑADIDO AL CARRITO';
+        } else
+        {
+            echo 'El product ya esta en el carrito';
         }
 
     }

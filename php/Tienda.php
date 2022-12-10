@@ -64,7 +64,7 @@
                         pid:pid, pnombre:pnombre, pprecio:pprecio,
                         pimagen:pimagen, pcode:pcode},
                     success:function(response){
-                        $("mensaje").html(response);
+                        $("#mensaje").html(response);
                     }
                     });
                 })
