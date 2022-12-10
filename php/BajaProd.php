@@ -2,9 +2,9 @@
 
 // VARIABLES DE CONEXION...
 
-$servidor = 'localhost:33065';
+$servidor = 'localhost';
 $cuenta = 'root';
-$password = '';
+$password = 'Sandia2016.!';
 $bd = 'productos';
 
 $conexion = new mysqli($servidor, $cuenta, $password, $bd);
@@ -138,21 +138,33 @@ if ($conexion->connect_errno) {
     
         while ($fila = $resultado->fetch_assoc()) {
 
-            ?>
+    ?>
 
-                <tr style="text-align: center;">
+    <tr style="text-align: center;">
 
-                <td> <?php echo $fila['IDProducto']; ?></td>
-                <td> <?php echo $fila['Nombre']; ?></td>
-                <td> <?php echo $fila['Categoria']; ?></td>
-                <td> <?php echo $fila['Descripcion']; ?></td>
-                <td> <?php echo $fila['Existencia']; ?></td>
-                <td> <?php echo $fila['Precio']; ?></td>
-                <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
-                
-                <?php
-                
-                echo '</tr>';
+        <td>
+            <?php echo $fila['IDProducto']; ?>
+        </td>
+        <td>
+            <?php echo $fila['Nombre']; ?>
+        </td>
+        <td>
+            <?php echo $fila['Categoria']; ?>
+        </td>
+        <td>
+            <?php echo $fila['Descripcion']; ?>
+        </td>
+        <td>
+            <?php echo $fila['Existencia']; ?>
+        </td>
+        <td>
+            <?php echo $fila['Precio']; ?>
+        </td>
+        <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
+
+        <?php
+
+            echo '</tr>';
 
         }
 
@@ -169,11 +181,11 @@ if ($conexion->connect_errno) {
 
     echo '<br><br>';
 
-    ?>
+                ?>
 
-    <select class="custom-select">
+        <select class="custom-select">
 
-        <?php
+            <?php
 
         $salida = '<table>';
 
@@ -183,7 +195,7 @@ if ($conexion->connect_errno) {
             //proceso de concatenacion de datos
         }
         ?>
-    </select>
+        </select>
 </body>
 
 </html>

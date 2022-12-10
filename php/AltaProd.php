@@ -1,8 +1,8 @@
 <?php
 
-$servidor = 'localhost:33065';
+$servidor = 'localhost';
 $cuenta = 'root';
-$password = '';
+$password = 'Sandia2016.!';
 $bd = 'productos';
 
 // CONEXION A BASE DE DATOS...
@@ -63,22 +63,34 @@ if ($conexion->connect_errno) {
 
             echo '</tr>';
 
-            while ($fila = $resultado->fetch_assoc()){ // SE RECORREN LOS DATOS DE LA TABLA...
-                
-                ?>
+            while ($fila = $resultado->fetch_assoc()) { // SE RECORREN LOS DATOS DE LA TABLA...
 
-                <tr style="text-align: center;">
+?>
 
-                <td> <?php echo $fila['IDProducto']; ?></td>
-                <td> <?php echo $fila['Nombre']; ?></td>
-                <td> <?php echo $fila['Categoria']; ?></td>
-                <td> <?php echo $fila['Descripcion']; ?></td>
-                <td> <?php echo $fila['Existencia']; ?></td>
-                <td> <?php echo $fila['Precio']; ?></td>
-                <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
-                
-                <?php
-                
+<tr style="text-align: center;">
+
+    <td>
+        <?php echo $fila['IDProducto']; ?>
+    </td>
+    <td>
+        <?php echo $fila['Nombre']; ?>
+    </td>
+    <td>
+        <?php echo $fila['Categoria']; ?>
+    </td>
+    <td>
+        <?php echo $fila['Descripcion']; ?>
+    </td>
+    <td>
+        <?php echo $fila['Existencia']; ?>
+    </td>
+    <td>
+        <?php echo $fila['Precio']; ?>
+    </td>
+    <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
+
+    <?php
+
                 echo '</tr>';
             }
 
@@ -94,26 +106,27 @@ if ($conexion->connect_errno) {
 
 
 }
-?>
+    ?>
 
-<!-- FRONT DEL FORMULARIO ------------------------------------------------------------------------------------------------------->
-<?php
-include "header.php";
-?>
+    <!-- FRONT DEL FORMULARIO ------------------------------------------------------------------------------------------------------->
+    <?php
+    include "header.php";
+    ?>
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Estilo.css">
+        <link rel="stylesheet" href="../css/Style-AltaProd.css">
         <script src="https://kit.fontawesome.com/3d7b0db529.js" crossorigin="anonymous"></script>
-        <title>Hola</title>
+        <title>Alta productos</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </head>
-    
+
 
 
     <body>
@@ -123,79 +136,82 @@ include "header.php";
             <h1 class="titulo"> - REGISTRO DE PRODUCTOS - </h1>
             <div class="inset">
                 <div class="container">
-       
+
                     <div class="row">
-          
+
                         <div class="col-4">
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post' enctype="multipart/form-data" >
-                    
+                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post'
+                                enctype="multipart/form-data">
+
                                 <div class="form-group">
                                     <label for="ID"> ID del Producto: </label>
-                                    <input type="number" name="ID" class="form-control" id="ID" placeholder="" maxlength="5">
+                                    <input type="number" name="ID" class="form-control" id="ID" placeholder=""
+                                        maxlength="5">
                                 </div>
-                    
+
                                 <div class="form-group">
                                     <label for="Nombre"> Nombre del Producto: </label>
                                     <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="">
                                 </div>
-                    
+
                                 <div class="form-group">
                                     <label for="Cat"> Categoria: </label>
                                     <input type="text" id="Cat" name="Cat" class="form-control" placeholder=" ">
                                 </div>
-                    
+
                                 <div class="form-group">
                                     <label for="Desc"> Descripcion: </label>
                                     <input name="Desc" type="text" class="form-control" id="Desc" placeholder="">
                                 </div>
-                    
+
                                 <div class="form-group">
                                     <label for="Exist"> Existencia: </label>
                                     <input name="Exist" type="number" class="form-control" id="Exist" placeholder="">
-                                    </div>
-                    
+                                </div>
+
                                 <div class="form-group">
                                     <label for="Precio"> Precio: </label>
                                     <input name="Precio" type="number" class="form-control" id="Precio" placeholder="">
                                 </div>
-                    
+
                                 <div class="form-group">
                                     <label for="Desc"> Imagen(URL): </label>
                                     <input name="Img" type="text" class="form-control" id="Img" placeholder="">
                                 </div>
-                    
+
                                 <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
                                 <br>
                                 <br>
-        <!-- FORMULARIO PARA IMAGEN ----------------------------------------------------------------------------------------------------->
-                    
+                                <!-- FORMULARIO PARA IMAGEN ----------------------------------------------------------------------------------------------------->
+
                                 <form action="LogicaImagen.php" method="post" enctype="multipart/form-data">
-                        
+
                                     <div class="form-group">
                                         <label for="Img"> Imagen: </label>
                                         <input type="file" name="fileTest" id="fileTest" class="form-control">
                                     </div>
-                        
-                                    <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR IMAGEN </button>
-                        
+
+                                    <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR IMAGEN
+                                    </button>
+
                                 </form>
-                    
+
                                 <br><br>
-                    
-        <!-- BOTONES DE ACCESO ---------------------------------------------------------------------------------------------------------->
-                    
+
+                                <!-- BOTONES DE ACCESO ---------------------------------------------------------------------------------------------------------->
+
                                 <button class="bttn"><a class="bttn" href="BajaProd.php">Eliminar Datos</a></button>
                                 <button class="bttn"><a class="bttn" href="ModiProd.php">Modificar Datos</a></button>
-                                <button class="bttn"><a  class="bttn" href="CompraP.php">Comprar Producto</a></button>
-                    
+                                <button class="bttn"><a class="bttn" href="CompraP.php">Comprar Producto</a></button>
+
                             </form>
 
                         </div> <!-- fin col -->
-            
+
                     </div> <!-- fin row -->
-            
+
                 </div> <!-- fin container -->
-             
+
             </div>
 
         </form>
@@ -203,7 +219,7 @@ include "header.php";
         <?php
         include "footer.php";
         ?>
-        
+
     </body>
 
-</html>
+    </html>
