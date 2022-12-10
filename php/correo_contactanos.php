@@ -1,9 +1,14 @@
 <?php
+//Falta creacion de la contraseña temporal
 
+$mail = "blog.isc22@gmail.com";
+$asunto = 'Sabinito Games-Contactanos';
+$head= $_POST["nombre"]." ".$_POST["apell"]." ".$_POST["mail"];
+$msj = $_POST["msj"];
 
-$mail = $_POST['email'];
-$asunto = 'Sabinito Games';
-
-$header = "Nos contactaremos contigo en la brevedad posible" . "\r\n";
-mail($mail, $asunto, $header);
+mail($mail, $asunto, $msj,$head);
 ?>
+<script>
+   
+    location.href = "Login-Front.php";
+</script>

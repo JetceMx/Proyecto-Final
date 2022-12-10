@@ -59,8 +59,8 @@ Mexico.</pre>
                         </tr>
 
                         <tr>
-                            <td><input type="text" class="Texto1" required></td>
-                            <td><input type="text" class="Texto2" name="email" required></td>
+                            <td><input type="text" class="Texto1" required name="nombre"></td>
+                            <td><input type="text" class="Texto2" name="apell" required></td>
                         </tr>
 
                         <tr>
@@ -69,8 +69,8 @@ Mexico.</pre>
                         </tr>
 
                         <tr>
-                            <td><input type="text" class="Texto3" required></td>
-                            <td><input type="text" class="Texto4" required></td>
+                            <td><input type="text" class="Texto3" name="mail" required></td>
+                            <td><input type="text" class="Texto4"  name="tel" required></td>
                         </tr>
 
                         <tr>
@@ -78,7 +78,7 @@ Mexico.</pre>
                         </tr>
 
                         <tr>
-                            <td colspan="2"><textarea rows="8" cols="43"></textarea></td>
+                            <td colspan="2"><textarea rows="8" cols="43" name="msj"></textarea></td>
 
                         <tr>
 
