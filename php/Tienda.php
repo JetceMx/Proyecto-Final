@@ -8,6 +8,7 @@
 
 <body>
     <div class="container">
+        <div class="mensaje"></div>
         <div class="row">
             <?php
             $stmt = $conn->prepare("SELECT * FROM productos");
@@ -57,9 +58,16 @@
                 var pcode = $form.find("pcode").val();
 
                 $.ajax({
-                    url: 'accion.php'
+                    url: 'accion.php',
+                    method: 'post',
+                    data: {
+                        pid:pid, pnombre:pnombre, pprecio:pprecio,
+                        pimagen:pimagen, pcode:pcode},
+                    success:function(response){
+                        $("mensaje").html(response);
+                    }
+                    });
                 })
             });
-        });
     </script>
 </body>
