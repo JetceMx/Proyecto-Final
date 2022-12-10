@@ -34,7 +34,6 @@
                                 <input type="hidden" class="pcode" value="<?= $row['producto_codigo'] ?>">
                                 <button class="carro"> <i></i> Agregar a carrito</button>
                             </form>
-                            <a href="accion.php?id<?= $row['id'] ?>" class="boton addItemBtn">AGREGAR AL CARRITO</a>
                         </div>
                     </div>
                 </div>
@@ -45,9 +44,22 @@
     <!-- FIN DE LA MUESRA DE PRODUCTOS -->
 
     <script type="text/javascript">
-        $(document).ready(function)
+        $(document).ready(function()
         {
-            $(.Boton)
-        }
+            $(".addItemBtn").click(function(e)
+            {
+                e.preventDefault();
+                var $form = $(this).closest(".form-submit");
+                var pid = $form.find("pid").val();
+                var pnombre = $form.find("pnombre").val();
+                var pprecio = $form.find("pprecio").val();
+                var pimagen = $form.find("pimagen").val();
+                var pcode = $form.find("pcode").val();
+
+                $.ajax({
+                    url: 'accion.php'
+                })
+            });
+        });
     </script>
 </body>
