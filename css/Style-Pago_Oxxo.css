@@ -1,0 +1,79 @@
+.Contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+  flex-direction: column;
+  color: white;
+  background: rgb(6, 5, 6);
+  background: linear-gradient(180deg, rgba(6, 5, 6, 1) 5%, rgba(201, 37, 179, 1) 50%, rgba(6, 5, 6, 1) 90%);
+}
+
+.Cuadro-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 600px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    
+}
+
+.Contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 760px;
+    height: 550px;
+    border: 3px solid #cbcbcb;
+    border-radius: 20px;
+}
+
+.Marco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 50px;
+    background: #060506;
+    border-radius: 2px;
+    
+}
+
+.Parte-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Parte-1_Derecha{
+    color: #060506;
+    padding-left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Parte-2{
+    color: #060506;
+}
+
+.Parte-2_Cuadro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 70px;
+    border: 3px solid #060506;
+    border-radius: 2px;
+    
+}
+
+
+
+
