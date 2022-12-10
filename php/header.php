@@ -100,7 +100,7 @@
                     <a href="#">Mi billetera</a>
                     <a href="#">Mis suscripciones</a>
                     <a href="actualizar.php">Mi cuenta</a>
-                    <a href="#">Administracion</a>
+                    <a href="AdminOpciones.php">Administracion</a>
                     <hr>
                     <a href="logout.php">Salir</a>
                 </div>

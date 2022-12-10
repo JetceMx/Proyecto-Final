@@ -1,34 +1,38 @@
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 750px;
-    flex-direction: column;
-    color: white;
-  background: rgb(6,5,6);
-background: linear-gradient(180deg, rgba(6,5,6,1) 5%, rgba(201,37,179,1) 50%, rgba(6,5,6,1) 90%);
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 750px;
+  flex-direction: column;
+  color: white;
+  background: rgb(6, 5, 6);
+  background: linear-gradient(180deg, rgba(6, 5, 6, 1) 5%, rgba(201, 37, 179, 1) 50%, rgba(6, 5, 6, 1) 90%);
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 520px;
-    height: 700px;
-    border: 3px solid #292C58;
-    border-radius: 20px;
-    background: rgb(6,5,6);
-    background: radial-gradient(circle, rgba(6,5,6,1) 35%, rgba(78,37,201,1) 100%);
-}
-    
-
-.Tarjetas{
-    display: flex;
-    flex-direction: row;
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 520px;
+  height: 700px;
+  border: 3px solid #292C58;
+  border-radius: 20px;
+  background: rgb(6, 5, 6);
+  background: radial-gradient(circle, rgba(6, 5, 6, 1) 35%, rgba(78, 37, 201, 1) 100%);
 }
 
-#cardholdername,#cardnumber,#expiry-date,#CVV,#Sub{
+
+.Tarjetas {
+  display: flex;
+  flex-direction: row;
+}
+
+#cardholdername,
+#cardnumber,
+#expiry-date,
+#CVV,
+#Sub {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -40,7 +44,7 @@ background: linear-gradient(180deg, rgba(6,5,6,1) 5%, rgba(201,37,179,1) 50%, rg
   opacity: 0.8;
 }
 
-#Sub{
+#Sub {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -51,6 +55,3 @@ background: linear-gradient(180deg, rgba(6,5,6,1) 5%, rgba(201,37,179,1) 50%, rg
   border-radius: 9px;
   opacity: 1;
 }
-
-    
-
