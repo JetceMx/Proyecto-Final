@@ -178,23 +178,13 @@ if ($conexion->connect_errno) {
                                     <label for="Desc"> Imagen(URL): </label>
                                     <input name="Img" type="text" class="form-control" id="Img" placeholder="">
                                 </div>
+                                
+                                <div class="form-group">
+                                        <label for="Img"> Imagen: </label>
+                                        <input type="file" name="IMG" class="form-control">
+                                </div>
 
                                 <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
-                                <br>
-                                <br>
-                                <!-- FORMULARIO PARA IMAGEN ----------------------------------------------------------------------------------------------------->
-
-                                <form action="LogicaImagen.php" method="post" enctype="multipart/form-data">
-
-                                    <div class="form-group">
-                                        <label for="Img"> Imagen: </label>
-                                        <input type="file" name="fileTest" id="fileTest" class="form-control">
-                                    </div>
-
-                                    <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR IMAGEN
-                                    </button>
-
-                                </form>
 
                                 <br><br>
 
@@ -202,7 +192,6 @@ if ($conexion->connect_errno) {
 
                                 <button class="bttn"><a class="bttn" href="BajaProd.php">Eliminar Datos</a></button>
                                 <button class="bttn"><a class="bttn" href="ModiProd.php">Modificar Datos</a></button>
-                                <button class="bttn"><a class="bttn" href="CompraP.php">Comprar Producto</a></button>
 
                             </form>
 
