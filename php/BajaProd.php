@@ -84,7 +84,7 @@ if ($conexion->connect_errno) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title> ELIMINAR PRODUCTOS </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -138,17 +138,21 @@ if ($conexion->connect_errno) {
     
         while ($fila = $resultado->fetch_assoc()) {
 
-            echo '<tr>';
+            ?>
 
-            echo '<td style="text-align: center; color: blue;">' . $fila['IDProducto'] . '</td>';
-            echo '<td>' . $fila['Nombre'] . '</td>';
-            echo '<td>' . $fila['Categoria'] . '</td>';
-            echo '<td>' . $fila['Descripcion'] . '</td>';
-            echo '<td>' . $fila['Existencia'] . '</td>';
-            echo '<td>' . $fila['Precio'] . '</td>';
-            echo '<td> <img src="Imagenes/' . $fila['Imagen'] . '" height="75px" width="75px"></td>';
+                <tr style="text-align: center;">
 
-            echo '</tr>';
+                <td> <?php echo $fila['IDProducto']; ?></td>
+                <td> <?php echo $fila['Nombre']; ?></td>
+                <td> <?php echo $fila['Categoria']; ?></td>
+                <td> <?php echo $fila['Descripcion']; ?></td>
+                <td> <?php echo $fila['Existencia']; ?></td>
+                <td> <?php echo $fila['Precio']; ?></td>
+                <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>" height="75" width="75"></td>
+                
+                <?php
+                
+                echo '</tr>';
 
         }
 
