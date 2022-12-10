@@ -161,7 +161,7 @@ if (isset($_POST['MOD'])) {
         </div>
         <div class="derecha">
 
-            <form class="estiloformulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post'>
+            <form class="estiloformulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post' enctype="multipart/form-data">
 
                 <ul class="wrapper">
 
