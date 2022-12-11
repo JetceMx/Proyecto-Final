@@ -1,6 +1,6 @@
 <?php
 // session_start();
-$conn = new mysqli("localhost", "root", "", "productos");
+$conn = new mysqli("localhost", "root", "Sandia2016.!", "productos");
 if ($conn->connect_error) {
     die("La conexion se petateo" . $conn->connect_error);
 }
@@ -24,6 +24,11 @@ include "header.php";
 
 <body>
     <div class="container">
+
+        <div class="categorias">
+            <h1>Categorias</h1>
+        </div>
+
         <div class="mensaje"></div>
         <div class="row">
             <?php
@@ -36,16 +41,17 @@ include "header.php";
                 <div class="borde1">
                     <div class="borde2">
                         <div class="imagen">
-                            <img src="data:images/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>">
+                            <img src="data:images/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>"
+                                style="width: 220px; height:150px;">
                         </div>
-                         <div class="informacion">
+                        <div class="informacion">
                             <h4>
                                 <?= $fila['Nombre'] ?>
                             </h4>
-                            <h5">
+                            <h5>
                                 <i class="signo pesos"> </i>&nbsp;&nbsp;<?= number_format($fila['Precio'], 2) ?>
                                     /$
-                                    </h5>
+                            </h5>
                         </div>
                         <div class="pieimg">
                             <form action="" class="form-submit">
@@ -83,37 +89,35 @@ include "header.php";
                     url: 'accion.php',
                     method: 'post',
                     data: {
-                        IDProducto:IDProducto,
-                        Nombre:Nombre,
+                        IDProducto: IDProducto,
+                        Nombre: Nombre,
                         Precio, Precio,
                         cant: cant,
-                        Imagen:Imagen,
-                        Codigo_Producto:Codigo_Producto
+                        Imagen: Imagen,
+                        Codigo_Producto: Codigo_Producto
                     },
-                    success: function(response)
-                    {
+                    success: function (response) {
                         $("#mensaje").html(response);
-                        window.scrollTo(0,0);
+                        window.scrollTo(0, 0);
                         CargarItemNumero();
                     }
                 });
-                });
-
-                CargarItemNumero();
-
-                function CargarItemNumero()
-                {
-                    $.ajax({
-                        url: 'accion.php',
-                        method: 'get',
-                        data: {
-                            cartItem: "cart_item"
-                        },
-                        success: function(respoonse){
-                            $("#cart-item").html(respoonse);
-                        }
-                    })
-                }
             });
+
+            CargarItemNumero();
+
+            function CargarItemNumero() {
+                $.ajax({
+                    url: 'accion.php',
+                    method: 'get',
+                    data: {
+                        cartItem: "cart_item"
+                    },
+                    success: function (respoonse) {
+                        $("#cart-item").html(respoonse);
+                    }
+                })
+            }
+        });
     </script>
 </body>

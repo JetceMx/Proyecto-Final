@@ -1,6 +1,6 @@
 <?php
 
-$servidor = 'localhost:33065';
+$servidor = 'localhost';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';
@@ -24,11 +24,10 @@ if ($conexion->connect_errno) {
         $exist = $_POST['Exist'];
         $precio = $_POST['Precio'];
         $img = addslashes(file_get_contents($_FILES['IMG']['tmp_name']));
-        $codigo = $_POST['Cod'];
 
         // SENTENCIA PARA INSERTAR DATOS POR CADENA -MYSQL- ...
 
-        $sql = "INSERT INTO productos (IDProducto, Nombre, Categoria, Descripcion, Existencia, Precio, Imagen, CodigoProducto)               VALUES('$id','$nom','$cat','$desc','$exist','$precio','$img','$codigo')";
+        $sql = "INSERT INTO productos (IDProducto, Nombre, Categoria, Descripcion, Existencia, Precio, Imagen)               VALUES('$id','$nom','$cat','$desc','$exist','$precio','$img')";
 
         // SE APLICA LA SENTENCIA EN LA CONEXION ACTUAL...
 

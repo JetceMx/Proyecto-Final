@@ -5,11 +5,12 @@ body {
 .container {
     display: flex;
     flex-direction: row;
+    padding: 5px;
+    margin: 10px;
 }
 
 .categorias {
     color: white;
-    border: 5px solid red;
 }
 
 .row {
@@ -22,7 +23,6 @@ body {
 .informacion {
     text-align: center;
     height: 200px;
-    border: 1px solid pink;
     color: white;
     margin: 6px;
 }
@@ -37,11 +37,13 @@ body {
     padding: 5px;
     margin: 15px;
     text-align: center;
-    border: 1px solid salmon;
+    border: 1px solid rgb(150, 79, 192);
+    border-radius: 10px;
+    background-color: #01000283;
 }
 
 .borde2 img {
-    border: 1px solid green;
+    border: 1px solid silver;
     height: 150px;
 }
 
