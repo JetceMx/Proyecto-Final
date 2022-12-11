@@ -53,13 +53,13 @@ body {
     color: white;
 }
 
-.text{
-    
-    color:white;
-  
+.text {
+
+    color: white;
+
 }
 
-.cupon{
+.cupon {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -117,4 +117,30 @@ body {
     cursor: pointer;
     color: white;
     outline: 0px;
+}
+
+.titulo {
+    border-radius: 5px;
+    border: 1px solid silver;
+    width: 200px;
+    background-color: #0100025e;
+    justify-content: center;
+    text-align: center;
+}
+
+.subtitulos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    width: 200px;
+    background-color: #0100022c;
+    justify-content: center;
+    text-align: center;
+}
+
+#Consolas:checked~.borde1 #contoles {
+    display: none;
+    border: 5px solid red;
 }

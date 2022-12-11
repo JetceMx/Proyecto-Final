@@ -33,11 +33,27 @@ include "header.php";
     <div class="container">
 
         <div class="categorias">
-            <h1>Categorias</h1>
+            <div class="titulo">
+                <h1>Categorias</h1>
+            </div>
+            <br>
+            <div class="subtitulos">
+                <div class="cat1">
+                    <input type="radio" name="filtro" id="todo" checked>
+                    <label for="todo">Todo</label>
+                </div>
+                <div class="cat1">
+                    <input type="radio" name="filtro" id="Consolas">
+                    <label for="todo">Consolas</label>
+                </div>
+                <div class="cat1">
+                    <input type="radio" name="filtro" id="Controles">
+                    <label for="todo">Controles</label>
+                </div>
+            </div>
         </div>
 
         <div class="mensaje"></div>
-
         <div class="row">
             <?php
             $stmt = $conn->prepare("SELECT * FROM productos");
@@ -45,8 +61,8 @@ include "header.php";
             $resultado = $stmt->get_result();
             while ($fila = $resultado->fetch_assoc()):
             ?>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-2">
-                <div class="borde1">
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-2" id="imagenes">
+                <div class="borde1" id="'<?= $fila['Categoria'] ?>'">
                     <div class="borde2">
                         <div class="imagen">
                             <img src="data:images/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>"
@@ -66,7 +82,6 @@ include "header.php";
                                 <input type="hidden" class="IDProducto" value="<?= $fila['IDProducto'] ?>">
                                 <input type="hidden" class="Nombre" value="<?= $fila['Nombre'] ?>">
                                 <input type="hidden" class="Precio" value="<?= $fila['Precio'] ?>">
-                                
                                 <button class="addItemBtn"> <i></i> Agregar a carrito</button>
                             </form>
                         </div>
