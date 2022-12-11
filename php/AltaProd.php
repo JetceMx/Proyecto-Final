@@ -139,7 +139,7 @@ include "header.php";
 
                         <div class="form-group">
                             <label for="Cod"> Codigo del Producto: </label>
-                            <input name="Cod" type="text" class="form-control" id="Cod" placeholder="">
+                            <input name="Cod" type="text" class="form-control" placeholder="">
                         </div>
 
                         <button class="btn bttn btn-success" type="submit" name="submit"> ENVIAR DATOS </button>
