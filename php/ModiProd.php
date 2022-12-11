@@ -229,7 +229,7 @@ if (isset($_POST['MOD'])) {
                                 <label for="Imagen"> Imagen </label>
                                 <img src="data:image/jpg;base64,<?php echo base64_encode($_SESSION['Img']); ?>"
                                     height="75" width="75">
-                                <input type="file" name="IMG2" id="IMG2">
+                                <input type="file" REQUIRED name="IMG2" id="IMG2">
                             </li>
 
                             <li class="form-row">
