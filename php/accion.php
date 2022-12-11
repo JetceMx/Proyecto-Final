@@ -14,12 +14,12 @@ if ($conn->connect_error) {
 	  $cant = $_POST['cant'];
 	  $precioTotal = $Precio * $cant;
 
-	  $stmt = $conn->prepare('SELECT Codigo_Producto FROM carro WHERE Codigo_Producto=?');
-	  $stmt->bind_param('s',$Codigo_Producto);
+	  $stmt = $conn->prepare('SELECT producto_code FROM carro WHERE producto_code=?');
+	  $stmt->bind_param('s',$producto_code);
 	  $stmt->execute();
 	  $res = $stmt->get_result();
 	  $r = $res->fetch_assoc();
-	  $code = $r['Codigo_Producto'] ?? '';
+	  $code = $r['producto_code'] ?? '';
 
 	  if (!$code) {
 	    $query = $conn->prepare('INSERT INTO carro (Nombre,Precio,Imagen,cant,precio_total,producto_code) VALUES (?,?,?,?,?,?)');
@@ -38,7 +38,7 @@ if ($conn->connect_error) {
 	  }
 	}
 
-	// Get no.of items available in the cart table
+
 	if (isset($_GET['cartItem']) && isset($_GET['cartItem']) == 'cart_item') {
 	  $stmt = $conn->prepare('SELECT * FROM carro');
 	  $stmt->execute();

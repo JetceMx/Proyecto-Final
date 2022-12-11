@@ -66,6 +66,7 @@ include "header.php";
                                 <input type="hidden" class="IDProducto" value="<?= $fila['IDProducto'] ?>">
                                 <input type="hidden" class="Nombre" value="<?= $fila['Nombre'] ?>">
                                 <input type="hidden" class="Precio" value="<?= $fila['Precio'] ?>">
+                                
                                 <button class="addItemBtn"> <i></i> Agregar a carrito</button>
                             </form>
                         </div>
@@ -89,9 +90,6 @@ include "header.php";
                 var IDProducto = $form.find(".IDProducto").val();
                 var Nombre = $form.find(".Nombre").val();
                 var Precio = $form.find("Precio").val();
-                var Imagen = $form.find(".Imagen").val();
-                var Codigo_Producto = $form.find(".Codigo_Producto").val();
-
                 var cant = $form.find(".cant").val();
                 $.ajax({
                     url: 'accion.php',
@@ -129,3 +127,5 @@ include "header.php";
         });
     </script>
 </body>
+
+</html>

@@ -120,7 +120,7 @@
             }
             ?>
 
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="carro.php"><i class="fa-solid fa-cart-shopping"></i><span id="cart-item"></span></a>
         </nav>
     </header>
 
@@ -147,4 +147,50 @@
 
 </body>
 
+<script type="text/javascript">
+        $(document).ready(function () {
+            $(".addItemBtn").click(function (e) {
+                e.preventDefault();
+                var $form = $(this).closest(".form-submit");
+                var IDProducto = $form.find(".IDProducto").val();
+                var Nombre = $form.find(".Nombre").val();
+                var Precio = $form.find("Precio").val();
+                var cant = $form.find(".cant").val();
+                $.ajax({
+                    url: 'accion.php',
+                    method: 'post',
+                    data: {
+                        IDProducto:IDProducto,
+                        Nombre:Nombre,
+                        Precio, Precio,
+                        cant: cant,
+                        Imagen:Imagen,
+                        Codigo_Producto:Codigo_Producto
+                    },
+                    success: function(response)
+                    {
+                        $("#mensaje").html(response);
+                        window.scrollTo(0,0);
+                        CargarItemNumero();
+                    }
+                });
+                });
+
+                CargarItemNumero();
+
+                function CargarItemNumero()
+                {
+                    $.ajax({
+                        url: 'accion.php',
+                        method: 'get',
+                        data: {
+                            cartItem: "cart_item"
+                        },
+                        success: function(respoonse){
+                            $("#cart-item").html(respoonse);
+                        }
+                    })
+                }
+            });
+    </script>
 </html>
