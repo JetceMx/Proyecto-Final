@@ -37,7 +37,7 @@ include "header.php";
         </div>
 
         <div class="mensaje"></div>
-        
+
         <div class="row">
             <?php
             $stmt = $conn->prepare("SELECT * FROM productos");

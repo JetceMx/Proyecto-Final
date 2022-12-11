@@ -2,14 +2,9 @@
 
 //session_start();
 
-
-
-
 include "header.php";
 
-
-
-$servidor = 'localhost';
+$servidor = 'localhost:33065';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';
@@ -112,29 +107,6 @@ if (isset($_POST['MOD'])) {
 
                                 <select class="custom-select" name='Modificar'>
 
-                                    <td>
-                                        <?php echo $fila['IDProducto']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $fila['Nombre']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $fila['Categoria']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $fila['Descripcion']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $fila['Existencia']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $fila['Precio']; ?>
-                                    </td>
-                                    <td> <img src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>"
-                                            height="75" width="75"></td>
-                                    <td>
-                                        <?php echo $fila['CodigoProducto']; ?>
-                                    </td>
                                     <?php
 
                         $salida = '<table>';
@@ -169,6 +141,9 @@ if (isset($_POST['MOD'])) {
                                         <td> <img
                                                 src="data:image/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>"
                                                 height="75" width="75"></td>
+                                        <td>
+                                            <?php echo $fila['CodigoProducto']; ?>
+                                        </td>
 
                                         <?php
 
@@ -208,6 +183,9 @@ if (isset($_POST['MOD'])) {
                 <div class="izquierdaBaja">
                     <?php echo $salida ?>
                 </div>
+
+            </div>
+            <div class="derecha">
 
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post'
                     enctype="multipart/form-data" class="prin">
@@ -265,8 +243,6 @@ if (isset($_POST['MOD'])) {
                         </ul>
                     </div>
                 </form>
-            </div>
-            <div class="derecha">
             </div>
         </div>
     </div>
