@@ -3,7 +3,7 @@
 include "header.php";
 // VARIABLES DE CONEXION...
 
-$servidor = 'localhost:33065';
+$servidor = 'localhost';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';
@@ -124,7 +124,7 @@ if ($conexion->connect_errno) {
         echo "no hay datos";
     }
 
-    echo '<br><br>';
+    echo '<br><br><br><br>';
 
     include "footer.php";
 

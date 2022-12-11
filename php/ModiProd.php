@@ -4,7 +4,7 @@
 
 include "header.php";
 
-$servidor = 'localhost:33065';
+$servidor = 'localhost';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';

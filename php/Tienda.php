@@ -19,7 +19,7 @@ include "header.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Style-Global.css">
     <link rel="stylesheet" href="../css/Style-Tienda.css">
-    <title>Acerca De</title>
+    <title>Tienda</title>
 </head>
 
 <body>
