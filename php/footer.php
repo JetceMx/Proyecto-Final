@@ -22,19 +22,19 @@
                 </figure>
             </div>
             <div class="box">
-                <h2>Productos</h2>
+                <h1>Productos</h1>
                 <a href="#">Consolas</a>
                 <a href="#">Controles</a>
                 <a href="#">Accesorios</a>
             </div>
             <div class="box">
-                <h2>Tienda</h2>
+                <h1>Tienda</h1>
                 <p>Lic. Benito Juárez, Zona Centro, 20000 Aguascalientes, Ags., México</p>
                 <p>Lun - Vie: 8:00 - 22:00 hrs</p>
                 <p>gamessabinito@gmail.com</p>
             </div>
             <div class="box">
-                <h2>Siguenos</h2>
+                <h1>Siguenos</h1>
                 <div class="red-social">
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="https://www.instagram.com/sabi.nitogames/" class="fa fa-instagram"></a>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="box">
-                <h2>Politica</h2>
+                <h1>Politica</h1>
                 <a href="Ayuda.php">FAQ</a>
             </div>
         </div>

@@ -5,7 +5,6 @@
 
 .pie-pagina .grupo-1 {
     width: 100%;
-    max-width: 1200px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -25,10 +24,10 @@
     width: 150px;
 }
 
-.pie-pagina .grupo-1 .box h2 {
+.pie-pagina .grupo-1 .box h1 {
     color: white;
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 22px;
 }
 
 .pie-pagina .grupo-1 .box p {
@@ -77,6 +76,21 @@
 
 @media (max-width:800px) {
     .pie-pagina {
-        flex-direction: column;
+        width: 100%;
+    }
+
+    .pie-pagina .grupo-1 {
+        width: 70%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        padding: 35px 0px;
+    }
+
+    .pie-pagina .grupo-1 .box .red-social {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        text-align: center;
+        justify-content: center;
     }
 }

@@ -136,7 +136,7 @@ include "header.php";
                             <label for="IMG"> Imagen: </label>
                             <input type="file" name="IMG" class="form-control">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="Cod"> Codigo del Producto: </label>
                             <input name="Cod" type="text" class="form-control" id="Cod" placeholder="">

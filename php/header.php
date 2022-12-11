@@ -24,7 +24,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
-        <nav>
+        <nav class="navegador1">
             <a class="a_general" href="Inicio.php" class="nav-link">Inicio</a>
             <a class="a_general" href="Tienda.php" class="nav-link">Tienda</a>
             <a class="a_general" href="AcercaDe.php" class="nav-link">Acerca De</a>
