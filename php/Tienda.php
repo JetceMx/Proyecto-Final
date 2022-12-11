@@ -1,6 +1,6 @@
 <?php
 // session_start();
-$conn = new mysqli("localhost", "root", "Sandia2016.!", "carrito");
+$conn = new mysqli("localhost", "root", "", "productos");
 if ($conn->connect_error) {
     die("La conexion se petateo" . $conn->connect_error);
 }
@@ -30,29 +30,29 @@ include "header.php";
             $stmt = $conn->prepare("SELECT * FROM productos");
             $stmt->execute();
             $resultado = $stmt->get_result();
-            while ($row = $resultado->fetch_assoc()):
+            while ($fila = $resultado->fetch_assoc()):
             ?>
             <div class="col-sm-6 col-md-4 col-lg-3 mb-2">
                 <div class="borde1">
                     <div class="borde2">
-                        <img src="<?= $row['producto_imagen'] ?>" class="tarjeta_imagen" height="250">
-                        <div class="informacion">
+                        <div class="imagen">
+                            <img src="data:images/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>">
+                        </div>
+                         <div class="informacion">
                             <h4>
-                                <?= $row['producto_nombre'] ?>
+                                <?= $fila['Nombre'] ?>
                             </h4>
                             <h5">
-                                <i class="signo pesos"> </i>&nbsp;&nbsp;<?= number_format($row['producto_precio'], 2) ?>
+                                <i class="signo pesos"> </i>&nbsp;&nbsp;<?= number_format($fila['Precio'], 2) ?>
                                     /$
                                     </h5>
                         </div>
                         <div class="pieimg">
                             <form action="" class="form-submit">
-                                <input type="hidden" class="pid" value="<?= $row['id'] ?>">
-                                <input type="hidden" class="pnombre" value="<?= $row['producto_nombre'] ?>">
-                                <input type="hidden" class="pprecio" value="<?= $row['producto_precio'] ?>">
-                                <input type="hidden" class="pimagen" value="<?= $row['producto_imagen'] ?>">
-                                <input type="hidden" class="pcode" value="<?= $row['producto_codigo'] ?>">
-                                <button class="carro"> <i></i> Agregar a carrito</button>
+                                <input type="hidden" class="IDProducto" value="<?= $fila['IDProducto'] ?>">
+                                <input type="hidden" class="Nombre" value="<?= $fila['Nombre'] ?>">
+                                <input type="hidden" class="Precio" value="<?= $fila['Precio'] ?>">
+                                <button class="addItemBtn"> <i></i> Agregar a carrito</button>
                             </form>
                         </div>
                     </div>
@@ -72,29 +72,48 @@ include "header.php";
             $(".addItemBtn").click(function (e) {
                 e.preventDefault();
                 var $form = $(this).closest(".form-submit");
-                var pid = $form.find("pid").val();
-                var pnombre = $form.find("pnombre").val();
-                var pprecio = $form.find("pprecio").val();
-                var pimagen = $form.find("pimagen").val();
-                var pcode = $form.find("pcode").val();
+                var IDProducto = $form.find(".IDProducto").val();
+                var Nombre = $form.find(".Nombre").val();
+                var Precio = $form.find("Precio").val();
+                var Imagen = $form.find(".Imagen").val();
+                var Codigo_Producto = $form.find(".Codigo_Producto").val();
 
+                var cant = $form.find(".cant").val();
                 $.ajax({
                     url: 'accion.php',
                     method: 'post',
                     data: {
-                        pid: pid, pnombre: pnombre, pprecio: pprecio,
-                        pimagen: pimagen, pcode: pcode
+                        IDProducto:IDProducto,
+                        Nombre:Nombre,
+                        Precio, Precio,
+                        cant: cant,
+                        Imagen:Imagen,
+                        Codigo_Producto:Codigo_Producto
                     },
-                    success: function (response) {
+                    success: function(response)
+                    {
                         $("#mensaje").html(response);
-                        pid: pid, pnombre: pnombre, pprecio: pprecio,
-                            pimagen: pimagen, pcode: pcode
-                    },
-                    success: function (response) {
-                        $("mensaje").html(response);
+                        window.scrollTo(0,0);
+                        CargarItemNumero();
                     }
                 });
-            })
-        });
+                });
+
+                CargarItemNumero();
+
+                function CargarItemNumero()
+                {
+                    $.ajax({
+                        url: 'accion.php',
+                        method: 'get',
+                        data: {
+                            cartItem: "cart_item"
+                        },
+                        success: function(respoonse){
+                            $("#cart-item").html(respoonse);
+                        }
+                    })
+                }
+            });
     </script>
 </body>
