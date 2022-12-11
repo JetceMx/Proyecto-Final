@@ -1,6 +1,6 @@
 <?php
 // session_start();
-$conn = new mysqli("localhost", "root", "Sandia2016.!", "productos");
+$conn = new mysqli("localhost", "root", "", "productos");
 if ($conn->connect_error) {
     die("La conexion se petateo" . $conn->connect_error);
 }
@@ -23,6 +23,13 @@ include "header.php";
 </head>
 
 <body>
+    <div class="cupon recuadro-4">
+        <div class="r-4_hijo ">
+            <br>
+            <h1 class="text">Cupon Nintendo Online</h1> <br><br>
+            <img src="https://i.ytimg.com/vi/j9p-RJU6VWo/maxresdefault.jpg" alt="" width="600px" height="250px">
+        </div>
+    </div>
     <div class="container">
 
         <div class="categorias">
@@ -30,6 +37,7 @@ include "header.php";
         </div>
 
         <div class="mensaje"></div>
+        
         <div class="row">
             <?php
             $stmt = $conn->prepare("SELECT * FROM productos");
