@@ -47,6 +47,10 @@ body {
     height: 150px;
 }
 
+.borde2 img:hover {
+    transform: scale(1.5);
+}
+
 .carro {
     border: 1px solid silver;
     background-color: #010002;

@@ -28,7 +28,10 @@ include "header.php";
             <a href="BajaProd.php">Borrar productos</a>
         </div>
         <div class="opcion">
-            <a href="#">Ver gráficas</a>
+            <a href="graficas.php">Ver gráfica 1</a>
+        </div>
+        <div class="opcion">
+            <a href="graficas2.php">Ver gráfica 2</a>
         </div>
     </div>
     <br>

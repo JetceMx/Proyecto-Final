@@ -71,10 +71,12 @@ include "header.php";
                         <div class="informacion">
                             <h4>
                                 <?= $fila['Nombre'] ?>
+                                    <br><br>
                             </h4>
                             <h5>
-                                <i class="signo pesos"> </i>&nbsp;&nbsp;<?= number_format($fila['Precio'], 2) ?>
-                                    /$
+                                <?= $fila['Descripcion'] ?>
+                                    <br><br>
+                                    Disponibles: <?= $fila['Existencia'] ?>
                             </h5>
                         </div>
                         <div class="pieimg">
