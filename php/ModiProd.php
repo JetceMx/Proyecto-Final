@@ -9,7 +9,7 @@ include "header.php";
 
 
 
-$servidor = 'localhost:33065';
+$servidor = 'localhost';
 $cuenta = 'root';
 $password = '';
 $bd = 'productos';
@@ -267,58 +267,6 @@ if (isset($_POST['MOD'])) {
                 </form>
             </div>
             <div class="derecha">
-
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='post'
-                    enctype="multipart/form-data" class="prin">
-                    <div class="inset">
-                        <ul class="wrapper">
-
-                            <li class="form-row">
-                                <label for="ID"> ID del Producto </label>
-                                <input type="number" name="IDProducto2" id="ID"
-                                    value="<?php echo $_SESSION["IDProducto"]; ?>">
-                            </li>
-
-                            <li class="form-row">
-                                <label for="Nombre"> Nombre </label>
-                                <input type="text" id="Nombre" name="Nombre2"
-                                    value="<?php echo $_SESSION["Nombre"]; ?>">
-                            </li>
-
-                            <li class="form-row">
-                                <label for="Categoria"> Categoria </label>
-                                <input type="text" id="Categoria" name="Cat2" value="<?php echo $_SESSION["Cat"]; ?>">
-                            </li>
-
-                            <li class="form-row">
-                                <label for="Descripcion"> Descripcion </label>
-                                <input type="text" id="contra" name="Desc2" value="<?php echo $_SESSION['Desc']; ?>">
-                            </li>
-
-                            <li class="form-row">
-                                <label for="Existencia"> Existencia </label>
-                                <input type="text" id="contra" name="Exist2" value="<?php echo $_SESSION['Exist']; ?>">
-                            </li>
-
-                            <li class="form-row">
-                                <label for="Precio"> Precio </label>
-                                <input type="text" id="contra" name="Precio2"
-                                    value="<?php echo $_SESSION['Precio']; ?>">
-                            </li>
-
-                            <li class="form-row">
-                                <label for="Imagen"> Imagen </label>
-                                <img src="data:image/jpg;base64,<?php echo base64_encode($_SESSION['Img']); ?>"
-                                    height="75" width="75">
-                                <input type="file" name="IMG2" id="IMG2">
-                            </li>
-
-                            <li class="form-row">
-                                <button type="submit" name="MOD">Modificar</button>
-                            </li>
-                        </ul>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
