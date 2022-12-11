@@ -67,7 +67,7 @@ $res=$con->query($sql);
   
 
   </form>
-  <div id="columnchart_material" style="width: 800px; height: 500px; background-color:black; margin-left:100px;"></div>
+  <div id="columnchart_material" style="width: 800px; height: 500px; background-color:black; margin-left:300px;"></div>
 
   <?php
   include "footer.php";
