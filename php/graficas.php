@@ -43,7 +43,7 @@ $res=$con->query($sql);
         var options = {
             colors: ["#7C00FF"],
           chart: {
-            title: 'Ventas 2021',
+            title: 'Ventas 2020',
             subtitle: 'Enero-Diciembre',
             colors: ["#7C00FF"],
             
