@@ -1,6 +1,6 @@
 <?php
 // session_start();
-$conn = new mysqli("localhost", "root", "", "productos");
+$conn = new mysqli("localhost", "root", "Sandia2016.!", "productos");
 if ($conn->connect_error) {
     die("La conexion se petateo" . $conn->connect_error);
 }
@@ -31,7 +31,6 @@ include "header.php";
         </div>
     </div>
     <div class="container">
-
         <div class="categorias">
             <div class="titulo">
                 <h1>Categorias</h1>
@@ -43,12 +42,12 @@ include "header.php";
                     <label for="todo">Todo</label>
                 </div>
                 <div class="cat1">
-                    <input type="radio" name="filtro" id="Consolas">
-                    <label for="todo">Consolas</label>
+                    <input type="radio" name="filtro" id="consolas1">
+                    <label for="consolas1">Consolas</label>
                 </div>
                 <div class="cat1">
-                    <input type="radio" name="filtro" id="Controles">
-                    <label for="todo">Controles</label>
+                    <input type="radio" name="filtro" id="controles1">
+                    <label for="controles1">Controles</label>
                 </div>
             </div>
         </div>
@@ -61,8 +60,11 @@ include "header.php";
             $resultado = $stmt->get_result();
             while ($fila = $resultado->fetch_assoc()):
             ?>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-2" id="imagenes">
-                <div class="borde1" id="'<?= $fila['Categoria'] ?>'">
+            <?php
+                $categoria = $fila['Categoria']
+                ?>
+            <div class="productos">
+                <div class="borde1 <?= $categoria ?>">
                     <div class="borde2">
                         <div class="imagen">
                             <img src="data:images/jpg;base64,<?php echo base64_encode($fila['Imagen']); ?>"
@@ -77,6 +79,8 @@ include "header.php";
                                 <?= $fila['Descripcion'] ?>
                                     <br><br>
                                     Disponibles: <?= $fila['Existencia'] ?>
+                                        <br><br>
+                                        <?= $fila['Categoria'] ?>
                             </h5>
                         </div>
                         <div class="pieimg">
